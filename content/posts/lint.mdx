@@ -1,0 +1,147 @@
+---
+title: Asphalt Design Lint - Design tool for Figma plugin
+description: Design Lint is a Figma plugin tool that aids designers in identifying and resolving design issues, ensuring alignment with the Asphalt Aloha Design System, aiming to save time and enhance collaboration with engineers.
+impact: Design Lint, a tool aligned with Asphalt Aloha Design System, reduced Gojek's work by 60%, increased issue-spotting by 26%, saving 4,259 hours and $93,709 annually for a significant efficiency and cost win.
+date: "2023"
+image: /lint/lint-cover.png
+company_profile: /company/gojek.png
+company_name: Gojek
+selected: true
+---
+
+
+
+
+<div>
+<p className="mb-0 font-medium text-lg dark:text-zinc-300">Impact</p>
+
+<h3 className=" bg-gradient-to-br from-pink-500 to-indigo-500  dark:from-pink-500 dark:to-indigo-500 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0">
+Design Lint cut Gojek's work by 60%, and boosted issue-spotting by 26%, saving 4,259 hours and $93,709 annually. It's a big efficiency and cost win.
+</h3>
+</div>
+
+---
+
+## Background
+As the Gojek design team plans to merge Product Designers into full-stack designers, ensuring consistency and compliance with our design system across all products becomes a significant challenge. We acknowledge that expecting designers to manually inspect every UI aspect of their designs with each feature release is unrealistic. This can result in discrepancies between what the designer has shipped and what the engineer discovers, potentially impacting the development process and requiring additional time to resolve.
+
+---
+## Why do we need it?
+
+#### Benefits to Business
+
+- Compliance with the design system and better experience across Gojek’s products.
+- Save the development time to implement the feature.
+
+#### Benefits to Designers
+
+How does our soln benefit designers?
+
+- Save time and cost for identifying and fixing design issues by following the Asphalt Aloha Design System standardized.
+- A better understanding of the Asphalt Design System
+- Have a seamless collaboration with the engineer once shipping a proper feature.
+
+---
+
+## Problem identified
+
+
+
+We started with an ambiguous problem statement
+
+>How might we provide a solution to designers to identify and fix design issues before shipping the feature to the engineer?
+
+
+#### For the Gojek designers
+
+From the perspective of Gojek employees, particularly designers, it will take time to identify and fix design issues and inconsistencies in the final process. By skipping this step and failing to ensure that everything is aligned with the Asphalt Aloha Design System sources, engineers may become confused and require additional development time.
+
+#### For the Gojek company
+
+The development process and cross-product delivery experiences will have an impact on Gojek's operations.
+
+---
+
+## Hypothesis
+
+
+
+>If we provide tools to detect design issues and able to fix them, then the designers will ship the right features and seamlessly collaborate with engineers.
+
+
+We believe that consistency across Gojek products is one of the keys to providing a great user experience. We can't ignore that the problem and development process is fast and as we all know, it's almost impractical for our designers to manually check every UI aspect of their designs every time. But, Gojek has a holly mantra to solve every problem with “Pasti Ada Jalan” or There is always a way.
+
+---
+
+## Propose solution
+
+- Create a Figma plugin that can help designers check for design issues (incompatibility with the Asphalt Aloha Design System) in their design before shipping to the engineers.
+- Provide a semi-automatic process to allow users to choose the correct token for it.
+- Provide confident scores based on compatibility with the Asphalt Aloha Design System and better component compliance.
+- Provide component configurators to create a high-quality design more quickly with component compliance in mind.
+
+---
+
+## User Stories
+
+These are the user stories that are defined for what users will do on the application:
+- As a designer, I want to check if there are any design issues like color, text, border, and corner radius that are not aligned with the Asphalt Aloha Design System 
+- As a designer, I want to check for multiple-screen 
+- As a designer, I want to get a design score based on compatibility with Asphalt Design System 
+- As a designer, I want to get a suggestion for each of the design issues item 
+- As a designer, I want to fix the issues directly 
+- As a designer, I want to get a historical item after fixing the issues
+- As a designer, I want to return the fixed issues if unintentional fixing
+- As a designer, I want to ignore the issues
+- As a designer, I want to know the location of design issues on the screen directly
+
+---
+
+## User Flow
+
+Based on those requirements, we can build a Figma plugin that is capable of detecting errors and hence fixing them with the correct style, tokens, or library. The following diagram below shows the flow of how users will interact with this plugin to be built.
+
+![Untitled](/lint/flow.png)
+
+---
+
+## Information Architecture
+
+![Untitled](/lint/tree.png)
+
+---
+
+## Final visual design
+
+![Untitled](/lint/img1.png)
+![Untitled](/lint/img2.png)
+![Untitled](/lint/img3.png)
+
+---
+
+## Statement to validate / Metrics
+
+#### North star metrics
+
+- Increase Aloha design system adoption to 80% or more.
+- Time and cost saving to identify the issues
+- Time and cost savings to fixing the issues
+- Increase accuracy in issue identification
+
+---
+
+## My contributions
+
+- Establish the design documentation
+- Define milestones and strategies
+- Facilitate focused group discussions and conduct usability testing
+- Measure the impact of metrics
+- Create the flow, information architecture, interface, and interactions
+- Collaborate with engineers to implement the design.
+
+---
+
+## Key learning
+
+- **User-Centric Insights:** Obtained valuable insights by directly addressing user pain points through close group discussions.
+- **Cost-Effective Prototyping:** Highlighted the importance of developing cost-effective solutions for direct user testing, ensuring the tool effectively addresses real user needs and challenges

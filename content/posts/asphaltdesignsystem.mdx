@@ -1,0 +1,260 @@
+---
+title: Asphalt Design System, a design system for Gojek's app.
+description: The Asphalt Design System is a custom design language system created by Gojek. It serves as the foundation for consistent and cohesive design across Gojek's products and services.
+impact: The Asphalt Design System, crafted by Gojek, ensures unified design across products. My contributions since H1 2023 have saved around 15,954 hours and $353,033 in front-end development and design costs—an ongoing success.
+date: "2022"
+image: /asphalt/asphalt-cover.png
+company_profile: /company/gojek.png
+company_name: Gojek
+selected: true
+---
+
+<div>
+<p className="mb-0 font-medium text-lg dark:text-zinc-300">Impact</p>
+
+<h3 className=" bg-gradient-to-br from-green-600 to-sky-500 dark:from-sky-600 dark:to-pink-500 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0 leading-tight">
+Since H1 2023, I've contributed to saving around 15,954 hours and an estimated $353,033 in front-end development and design costs, an ongoing effort.
+</h3>
+</div>
+
+---
+
+## Principle
+
+Great design principles define quantifies that we can interpret in different ways and ground them in the context of a specific product. Having clarity about the purpose of building a system is paramount because every decision should be shaped by it, even if indirectly.
+
+
+#### Consistency
+
+We design with the system in mind and never as individual flows. Our designs are consistent with the best practices and any outliers are avoided.
+
+
+#### Usability
+
+We design with users in mind first and business second, keeping it efficient, effective, learnable, and safe.
+
+
+#### Accessibility
+
+Accessibility governs our design to ensure inclusivity. We want every section of our users to feel like the app is designed for them without the need to put in extra effort to use it.
+
+
+#### Aesthetics
+
+We design products that elevate Gojek as a brand without compromising on the visual aesthetics of our interfaces and interactions.
+
+---
+
+## Design tokens
+
+### Spacing
+
+![Untitled](/asphalt/Untitled%205.png)
+
+Aloha employs a spacing system based on tokens. We use the same scale for defining space within a component as well as its spacing with the overall screen boundaries. 4px is the base value in the scale. This base token and its various multipliers form the spacing token library. We use these tokens to align our components to the 4px grid while creating mobile designs.
+
+
+#### Connection
+
+Elements in a design near to each other are seen as related to each other in a meaningful way. When we add more space between the elements, their perceived relationship weakens.
+
+
+#### Hierarchy
+
+Elements with more spacing around them tend to be perceived as higher in importance than those with less space around them. Provide sample surrounding space to the content of high significance to attract focus.
+
+
+#### White space
+
+Empty space, also known as white space, is vital in design. White space breaks up sections on a screen to create a visual hierarchy, helping in information processing, or increasing focus on specific elements.
+
+  
+
+---
+
+### Color & themes
+
+Colors in Aloha have their roots in the product type in Gojek, consisting of three color themes - **Green, Pink, and Purple.**
+
+<div className="grid grid-cols-3 gap-6 mt-6 mb-6">
+
+<div>
+<div className=" w-12 h-12 bg-green-700 rounded-lg"></div>
+<h4> The green theme </h4>
+<p>for our consumer and driver-partner apps</p>
+</div>
+
+<div>
+<div className=" w-12 h-12 bg-pink-600 rounded-lg"></div>
+<h4> The pink theme </h4>
+<p>for entertainment services, and.</p>
+</div>
+
+<div>
+<div className=" w-12 h-12 bg-[#8F2E9E] rounded-lg"></div>
+<h4>The purple theme</h4>
+<p>for merchant-related apps.</p>
+</div>
+
+
+</div>
+
+
+The structure helps us build consistency and flexibility to create a new theme for a new app.
+
+![Untitled](/asphalt/Untitled%2012.png)
+
+Our primary color system consists of 3 themes (green, Pink, and Purple), within which we have their light and dark versions. The tree branches out further into color styles for specific scenarios like fill, border, and icon.
+
+![Untitled](/asphalt/Untitled%2013.png)
+
+<aside className=" border px-4 py-4 rounded-2xl border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-800">
+📌 These children and the styles follow a common naming convention across the Green, Pink, and Purple themes, with a change in the value of the color code. This helps in switching between them without making any changes to our system.
+
+</aside>
+
+---
+
+### Typography
+
+![Untitled](/asphalt/Untitled%2014.png)
+
+Typefaces can be a touchpoint to subtly convey the right tone and personality throughout our digital experiences. With these factors in mind, we chose the typeface - **Maison Neue.** Its unique attributes give Gojek a strong brand recall across communication channels. The legible form and character work magic on print and digital alike. And with larger scales, it only gets sassier.
+
+![Untitled](/asphalt/splash.gif)
+![Untitled](/asphalt/maison.png)
+![Untitled](/asphalt/sample.png)
+
+
+
+![Untitled](/asphalt/Untitled%2017.png)
+
+---
+
+### Shadow
+
+The surface blocking the light source cast a shadow in Aloha. The conceptual light source is always placed perpendicular to the device screen.
+
+![Untitled](/asphalt/Untitled%2018.png)
+
+#### Elevation
+
+We measure elevations from the base to the top of a component. It’s the same way the height of mountains is measured, from sea level to the tip of the mountain. All components are 1-pixel ticks. The value of elevation decides the shadow size. In our system, we have two types of elevations.
+
+![Untitled](/asphalt/Untitled%2019.png)
+
+---
+
+## Component
+
+![Untitled](/asphalt/Untitled%2020.png)
+
+### Master components
+
+Implementing Brad Forst’s Atomic Design, Aloha Master components are the reusable building blocks specifically created to work together to create familiar and consistent patterns and intuitive user experiences. Each component has its associated interaction, UI needs, state changes, and variants, all with accessibility built into them.
+
+![Untitled](/asphalt/Untitled%2021.png)
+
+### Workshop and common component
+
+<img src="/asphalt/Untitled 22.png" className=" w-40" />
+
+In a large ecosystem, we realized there will always be unique components that a specific feature, product, or app might require for its various use cases. Relying solely on the master component can be a limitation for a designer and the product itself. Therefore, we decided to create a workshop component library that can accommodate those product-specific needs and bring the necessary flexibility to systematic design. When more than 3 products use a workshop component, we label them as common components. They will then undergo testing in various edge cases to satisfy all the flows where the products may be used it, followed by updating the documentation for the engineering team to build it. The component will then be a master component.
+
+---
+
+## Accessibility
+
+It's essential that Gojek is usable for everyone - "Leave no customer behind."
+
+Everyone is a pretty big group. It includes our customers, our driver partners, our merchants. It also consists of all members of our community who rely on accessible experiences. Baking A11y inside our components is one way to improve accessibility and consistency when building products for the Gojek ecosystem.
+
+#### Colors and visual cues
+
+We comply with WCAG AA standard contrast ratios. To do this, we choose our primary, secondary, tertiary, and extended icon and product UI colors that support accessibility, ensuring sufficient color contrast between elements so that people with low vision can see and use our products too.
+
+We must not convey or differentiate information only with colors. Instead, use multiple visual cues, such as stroke weight, shape, text, or icons to ensure everyone receives the same information. These elements help people who are unable to or have difficulty distinguishing one color from another, people who are color blind, have low vision, or are blind.
+
+
+#### Structure and hierarchy
+
+A consistent and clear hierarchy helps people who navigate the page using assistive technology. Be predictable with structure and use patterns and layouts familiar to people. We try to pay attention to these crucial aspects for every design that is shipped.
+
+- List by the level of importance
+- Text scaling
+- Components grouping
+- Sequencing for screenreader
+
+
+#### Component feedback
+
+Using multi-sensory feedback to know what's happening in the screen adds an additional layer of interaction, using a different sense or a variation on a sense. These can offer a more tactile way for users to interact with our app, not only improving the accessibility but also enriching the experience of all users.
+
+- Haptic feedback
+- Auditory feedback
+- Responsive component
+
+
+---
+
+## Creative things
+
+### Iconography
+
+Aloha iconography is accessible, intuitive, and contextual. Inspired by the circular shape of our Gojek logo, "Solv," it gives us a unique visual identity.
+
+![Untitled](/asphalt/Untitled%2026.png)
+
+---
+
+### Illustration
+
+We believe that every element on the screen is essential. This idea applies to our illustrations too. They speak to the user in their language in a relatable and contextual manner to help them achieve their goals.
+
+#### Spot Hero
+
+![Untitled](/asphalt/Untitled%2027.png)
+
+Aloha's largest illustration size. This variant is used in empty states, dialogue cards, or onboarding screens to give the user detailed information to take action in cases where graphical elements play a major role in communication.
+
+#### Spot
+
+![Untitled](/asphalt/Untitled%2028.png)
+
+A mid-sized set of illustrations is used to complement the content and provide equal context with the text when space is a constraint.
+
+#### Mini Spot
+
+![Untitled](/asphalt/Untitled%2029.png)
+
+The smallest-sized illustrations are similar to the Spot but just mini (literally). These are sometimes used as replacements for icons to give that extra bit of delight in the interface.
+
+---
+
+### Motion Design
+
+Throughout the Gojek ecosystem, we use functional motion design to help solve user experience problems, improve fluidity, and create a cohesive and seamless environment that makes everything easier to use. Our motion principles educate designers on regulating motion usage and effectively apply the same while designing motion for functional purposes.
+
+
+#### Candid
+
+*"Having a human touch”*
+
+For any design to be objective, it needs to connect with the user emotionally, taking them beyond their imagination, so it feels more relatable to them.
+
+
+
+#### Contextual
+
+*“Show don’t tell”*
+
+Motion can capture attention and highlight an important piece of data on the screen or critical UI element to be in focus.
+
+
+
+#### Witty / Playful
+
+*“Being yourself”*
+
+Our motion is expressive and has character. We want the user to feel the joyful moments and at the same time feel connected with our product.
+

@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+  .prose-vercel :where(h1):not(:where([class~=not-prose] *)) {
+    font-weight:600;
+    
+  }
+  .prose-vercel :where(h2):not(:where([class~=not-prose] *)) {
+    font-weight:600;
+    @apply  mt-6 mb-4 dark:text-zinc-200 text-zinc-800
+
+  }
+
+  .prose-vercel :where(h3):not(:where([class~=not-prose] *)) {
+    font-weight:600;
+    @apply mt-2
+  }
+
+  .prose-vercel :where(p):not(:where([class~=not-prose] *)) {
+
+    @apply my-0
+  }
+  .prose :where(ul):not(:where([class~="not-prose"], [class~="not-prose"] *)){
+    @apply mt-0 mb-0
+  }
+
+  .prose :where(hr):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+
+    border-top-width: 1px;
+    margin-top: 3em;
+    margin-bottom: 2em;
+  }

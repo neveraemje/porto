@@ -1,0 +1,149 @@
+---
+title: Taxi consent dispatch
+description: The Taxi Consent Dispatch project addressed the challenge of ensuring a reliable and user-friendly transportation experience during high-demand traffic, significantly improving the user acceptance rate and trust in Gojek's services.
+impact: The Taxi Consent Dispatch project improved transportation reliability and user experience during high-demand traffic. Achieving a 1.7x BCR improvement in Jabodetabek and 1.5x in non-Jabo, it also reduced CADF and pickup distance by 50%, enhancing user satisfaction and system efficiency.y.
+date: "2023"
+image: /taxi/cover.png
+company_profile: /company/gojek.png
+company_name: Gojek
+selected: true
+---
+
+
+
+<div>
+<p className="mb-0 font-medium text-lg dark:text-zinc-300">Impact</p>
+
+<h3 className=" bg-gradient-to-b from-green-600 to-sky-400 dark:from-green-400 dark:to-sky-300 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0">
+This project achieved a 1.7x improvement in BCR in Jabodetabek and a 1.5x improvement in non-Jabo, along with a 50% reduction in CADF and a 50% reduction in pickup distance, significantly enhancing the user experience and system efficiency.
+</h3>
+</div>
+
+---
+
+## Background
+
+Indonesia has a population of one million, especially in several big cities that cause high traffic. This can happen by rain or after working hours. Order requests become difficult when there is high traffic. Instead of the system providing a solution, what happens is the customer doesn't get the driver and becomes disappointed.
+
+Since our system has integrated with one taxi company, we want to consider providing a better driver experience to give alternative solutions while the high traffic happens. 
+
+There will be a degradation in the booking experience wherein won’t have some features existing in Gojek like chat, multistep, schedule, tipping, etc.
+
+---
+
+## Why do we need it?
+
+#### Benefits to business
+
+- Continuation of the standalone BlueBird direct dispatch integration.
+- Fulfill the agreement with BlueBird on the direct dispatch implementation.
+- Have a better driver experience by only managing 1 App for all partners in the BlueBird ecosystem.
+- Have a better acceptance rate for BlueBird booking.
+- Integration with other taxi companies in the future
+    - This service and product should be reusable for the new/next Taxi onboarding.
+
+#### Benefits to Users
+
+How does our solution benefit users?
+
+- Users will get a driver to take them to their destination, even if it's from another vehicle
+- Increase user trust in the company
+
+---
+
+## What is the problem
+
+We started with an ambiguous problem statement
+<div className=" my-4">
+<h3 className=" bg-gradient-to-b from-zinc-600 to-zinc-500 dark:from-zinc-400 dark:to-zinc-500 bg-clip-text text-transparent text-2xl mb-0">
+" How might we provide a solution to users when booking transport in the high demand traffic? "
+</h3>
+</div>
+
+
+{/* > How might we provide a solution to users when booking transport in the high demand traffic?
+>  */}
+
+#### For the Gojek user
+
+From the Gojek user perspective, it will be an annoying moment if they don’t get the driver it will reduce satisfaction when using the Gojek App  
+
+#### For the Gojek company
+
+The Gojek company will be affected by the acceptance rate of booking experience and impact the future sustainability
+
+---
+
+## Hypothesis
+
+<div className=" my-4">
+<h3 className=" bg-gradient-to-b from-zinc-600 to-zinc-500 dark:from-zinc-400 dark:to-zinc-500 bg-clip-text text-transparent text-2xl mb-0">
+" If we provide an alternative vehicle from outside of Gojek, Then the user still gets the driver and the driver keeps getting bids and so increasing the acceptance rate. "
+</h3>
+</div>
+
+{/* > If we provide an alternative vehicle from outside of Gojek, Then the user still gets the driver and the driver keeps getting bids and so increasing the acceptance rate.
+>  */}
+
+We believe that user satisfaction is our key. Meanwhile, we can’t predict how often the high traffic will happen. But, Gojek has a holly mantra to solve every problem with “Pasti Ada Jalan” or There is always a way.
+
+---
+
+## Proposed solution
+
+- **Alternative Vehicle Integration**: We suggest integrating alternative vehicle providers into the Gojek app. By expanding our pool of available drivers, we can ensure that users receive timely transportation, even during peak traffic hours. This will significantly enhance user satisfaction and trust in our service.
+- **Simplified User Experience**: During high-traffic scenarios, certain features like chat, multi-step options, scheduling, and tipping may not be available. However, we will maintain a user-friendly interface that simplifies the booking process, ensuring that users can secure a ride swiftly and with ease.
+- **Enhanced Driver Acceptance**: By providing more opportunities for drivers to receive booking requests, we anticipate an increase in the acceptance rate. This benefits both users and drivers, enhancing the overall ecosystem's sustainability.
+
+---
+
+## User journey
+
+![Untitled](/taxi/taxi-journey.png)
+
+In the process of ordering a car ride through a Gojek app, the user initiates the journey by selecting the pickup location, specifying the destination, choosing a ride type, activating the consent taxi feature, receiving driver notifications, tracking the ride, experiencing the trip, handling payment and tipping,  and receiving a ride summary while providing feedback on both the ride and the app's usability.
+
+---
+
+## User flow
+
+![Untitled](/taxi/taxi-flow.png)
+
+- **Start**: The user begins their journey.
+- **Initiate car ride order**: The user decides to order a car ride.
+- **Estimate gocar screen**: The user receives an estimate for their gocar ride.
+- **Taxi consent onboarding**: The process introduces the user to taxi consent.
+- **Activate taxi consent**: The user activates the taxi consent feature.
+- **If the user gets a gocar driver, then proceed to gocar ride**: If a gocar driver is available, the user's gocar ride begins.
+- **If the user doesn’t get a gocar driver, then check taxi consent**: If there's no gocar driver, the user checks the taxi consent.
+- **If the user gets a taxi driver, go to taxi ride**: If a taxi driver is available, the user starts their taxi ride.
+- **If the user doesn't get a taxi driver, return to the estimate**: If there's no taxi driver, the user returns to the estimation screen.
+- **Finish**: The journey concludes.
+
+---
+
+## Final visual
+
+
+![Untitled](/taxi/taxi1.png)
+![Untitled](/taxi/taxi2.png)
+![Untitled](/taxi/taxi3.png)
+
+
+---
+
+## Success metrics
+
+- Primary metrics
+    - North Star: Bid Acceptance Rate
+- Secondary metrics:
+    - Cancellation rate
+    - Booking Acceptance rate
+    - Cancellation rate
+    
+
+---
+
+## Key learning
+
+This project underscores the importance of flexibility and adaptability in addressing challenges. It aligns with Gojek's philosophy of finding solutions for every problem, even in the face of high traffic conditions, and reinforces our commitment to providing reliable transportation services to our users.
