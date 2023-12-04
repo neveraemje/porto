@@ -31,7 +31,7 @@ const page = () => {
    <img src="/profile/talk.png" className="mt-0 object-cover h-full rounded-lg"/>
   </div>
 </div>
-<p className='mt-6 text-lg dark:text-zinc-300 text-zinc-700'>I'm Emje, an Informatics Engineering graduate. I started as a Graphic Designer, transitioned to UIUX Design in 2017, and then became an Interaction Designer at Kata.ai in 2019. Now, I'm a full-time Product Designer at Gojek Design Team, working on the Asphalt Aloha Design System. With over 7 years of experience, I see design as an ever-changing journey, like a traveler seeking knowledge on an unknown path. It's like a hike with challenges, but I believe patience and resilience lead to success.</p>
+<p className='mt-6 text-lg dark:text-zinc-300 text-zinc-700'>I am Emje, an Informatics Engineering graduate. I started as a Graphic Designer, transitioned to UIUX Design in 2017, and then became an Interaction Designer at Kata.ai in 2019. Now, I am a full-time Product Designer at Gojek Design Team, working on the Asphalt Aloha Design System. With over 7 years of experience, I see design as an ever-changing journey, like a traveler seeking knowledge on an unknown path. It is like a hike with challenges, but I believe patience and resilience lead to success.</p>
   </div>
 
 <Button href=''>Download my resume <HiDownload/></Button>
