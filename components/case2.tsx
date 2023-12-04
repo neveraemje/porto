@@ -2,7 +2,7 @@ import React from 'react'
 import { allPosts } from '@/.contentlayer/generated';
 import Image from 'next/image';
 import Link from 'next/link';
-import { HiArrowRight } from 'react-icons/hi';
+
 import { HiChevronRight } from 'react-icons/hi';
 
 
