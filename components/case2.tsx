@@ -15,7 +15,6 @@ export const CaseStudies = () => {
     return dateB.getTime() - dateA.getTime(); // Use getTime() to get the numeric value for comparison
   });
 
-   
   return (
 <div className="flex flex-col gap-4 mt-14 max-w-3xl sm:mx-4" >
 
