@@ -9,6 +9,10 @@ import { HiChevronLeft } from "react-icons/hi"
 import Footer from "@/components/Footer"
 import Button from "@/components/button"
 
+import { IBM_Plex_Sans } from "next/font/google"
+
+
+
 interface PostProps {
   params: {
     slug: string[]
@@ -59,7 +63,7 @@ export default async function PostPage({ params }: PostProps) {
     <>
 
    
-<div className="prose dark:prose-invert max-w-4xl ">
+<div className="prose dark:prose-invert max-w-4xl mx-4">
   <div className=" mt-10">
     <Link href="/case" className=" text-teal-600 dark:text-teal-500 hover:underline flex items-center gap-1 no-underline"><HiChevronLeft/> Back </Link></div>
 
@@ -83,21 +87,19 @@ export default async function PostPage({ params }: PostProps) {
 
 
      
-      <article className="py-6 prose dark:prose-invert max-w-4xl prose-vercel">
+      <article className="py-6 prose dark:prose-invert max-w-4xl prose-vercel mx-4">
       <div className="flex flex-col md:flex-row gap-1">
         <div className="w-full md:w-1/4  gap-1">
         
 
           <div>
-            <p className=" text-sm">Published at</p>
+            <div className="">Published at</div>
             <div className=" flex items-center gap-2">
-            
-          <p className=" font-medium">{post.date}</p> 
+          <div className=" font-medium text-base">{post.date}</div> 
             </div>
           </div>
 
           <div className=" mt-4">
-            <p className=" text-sm">Company</p>
             <div className=" flex items-center gap-2">
             <img
             src={post.company_profile}
@@ -107,7 +109,7 @@ export default async function PostPage({ params }: PostProps) {
             title="Gojek"
             className=" my-2"
             />
-          <p className=" font-medium">{post.company_name}</p> 
+          <div className=" font-medium">{post.company_name}</div> 
             </div>
           </div>
        

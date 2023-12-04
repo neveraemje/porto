@@ -2,7 +2,10 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='flex flex-col items-center gap-8 lg:mt-14 mb-14'>
+    <div className='flex flex-col items-center mt-14 mb-14'>
+
+      <h3 className=' mb-2'>Get in touch to collaboration</h3>
+
             <div className="mt-6 flex gap-6">
   <a className="group -m-1 p-1" aria-label="Follow on Twitter" href="https://twitter.com/Neveraemje">
     <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300">

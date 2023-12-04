@@ -2,15 +2,16 @@ import React from 'react'
 import Link from 'next/link'
 import { HiDownload } from 'react-icons/hi'
 import Button from '@/components/button'
+import Image from 'next/image'
 
 const page = () => {
   return (
-    <div className='py-6 prose dark:prose-invert max-w-3xl my-10'>
+    <div className='py-6 prose dark:prose-invert max-w-3xl lg:mx-10 my-10 mx-4'>
 
-<div className=" flex flex-col items-center gap-8 lg:mt-14 mb-14">
+<div className=" flex flex-col items-center gap-8 lg:mt-14 mb-14 ">
   <div className=" flex flex-col justify-center items-center gap-2 text-center">
     <h1 className=" font-semibold bg-gradient-to-b from-zinc-700 to-zinc-500 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent text-3xl lg:text-3xl mb-0">A Product Designer, with +7 years of experience, specializes in crafting stable user-centered design and scalable software systems for businesses. </h1>
-  <div className="columns-3 gap-4 space-y-4 mt-6">  
+  <div className="columns-3 gap-4 space-y-4 mt-6 z-20">  
   <div className=" h-40 w-full relative">
    <img src="/profile/nike.png" className=" mt-0 object-cover w-full h-full rounded-lg"/>
   </div>
@@ -30,7 +31,7 @@ const page = () => {
    <img src="/profile/talk.png" className="mt-0 object-cover h-full rounded-lg"/>
   </div>
 </div>
-<p className='mt-6 text-lg px-10 dark:text-zinc-300 text-zinc-700'>I'm Emje, an Informatics Engineering graduate. I started as a Graphic Designer, transitioned to UIUX Design in 2017, and then became an Interaction Designer at Kata.ai in 2019. Now, I'm a full-time Product Designer at Gojek Design Team, working on the Asphalt Aloha Design System. With over 7 years of experience, I see design as an ever-changing journey, like a traveler seeking knowledge on an unknown path. It's like a hike with challenges, but I believe patience and resilience lead to success.</p>
+<p className='mt-6 text-lg dark:text-zinc-300 text-zinc-700'>I'm Emje, an Informatics Engineering graduate. I started as a Graphic Designer, transitioned to UIUX Design in 2017, and then became an Interaction Designer at Kata.ai in 2019. Now, I'm a full-time Product Designer at Gojek Design Team, working on the Asphalt Aloha Design System. With over 7 years of experience, I see design as an ever-changing journey, like a traveler seeking knowledge on an unknown path. It's like a hike with challenges, but I believe patience and resilience lead to success.</p>
   </div>
 
 <Button href=''>Download my resume <HiDownload/></Button>
@@ -39,7 +40,7 @@ const page = () => {
 </div>
 
 <section className="flex flex-col md:flex-row gap-1 md:gap-9 w-full">
-  <h2 className="flex text-lg font-semibold  text-zinc-900 dark:text-zinc-100 mr-12">
+  <h2 className="flex text-lg font-semibold  text-zinc-900 dark:text-zinc-100 mr-12 mt-0">
     <span className=" ml-2">Experience</span>
   </h2>
   <div className="flex flex-col gap-1 w-full mt-0">
@@ -123,7 +124,7 @@ const page = () => {
 
 
 <section className="flex flex-col md:flex-row gap-1 md:gap-9 w-full mt-14">
-  <h2 className="flex text-lg font-semibold  text-zinc-900 dark:text-zinc-100 mr-12">
+  <h2 className="flex text-lg font-semibold  text-zinc-900 dark:text-zinc-100 mr-12 mt-0">
     <span className=" ml-2">Community</span>
   </h2>
   <div className="flex flex-col gap-1 w-full mt-0">
