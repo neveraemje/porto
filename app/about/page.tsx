@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { HiDownload } from 'react-icons/hi'
 import Button from '@/components/button'
-import Image from 'next/image'
+
 
 const page = () => {
   return (
