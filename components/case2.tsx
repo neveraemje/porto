@@ -8,7 +8,7 @@ import { HiChevronRight } from 'react-icons/hi';
 
 
 export const CaseStudies = () => {
-   // Sort posts based on the date in descending order
+ 
    const sortedPosts = allPosts.sort((a, b) => {
     const dateA = new Date(a.date ?? 0); // Use 0 if 'date' is undefined
     const dateB = new Date(b.date ?? 0);
