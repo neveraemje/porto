@@ -12,7 +12,7 @@ export const Case = () => {
     
   <div className=" justify-between flex items-center">
     <h2 className=" text-2xl font-semibold my-0 text-zinc-800 dark:text-zinc-200">Selected case studies</h2>
-    <Link href="/case" className=" text-teal-600 dark:text-teal-500 hover:underline flex items-center gap-1 no-underline">See all case studies <HiChevronRight/> </Link>
+    <Link href="/case" className=" text-teal-600 dark:text-teal-500 hover:underline flex items-center gap-1 no-underline">See all<HiChevronRight/> </Link>
   </div>
 
   <div className=" mt-8">  

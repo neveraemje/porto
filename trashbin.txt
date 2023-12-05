@@ -1,0 +1,675 @@
+I'm Emje, a product designer from Indonesia with seven years of design experience. Currently a Product Designer at Gojek Design Team 🪄✨🏕️
+ 
+import Image from 'next/image'
+ 
+import { HiArrowRight } from 'react-icons/hi';
+ 
+  // Sort posts based on the date in descending order
+ 
+lg:mt-14
+ 
+, and implementing automated payments
+ 
+gap-8
+ 
+      <p>Get in touch to schedule a presentation</p>
+
+ 
+text-sm
+ 
+my-0 mt-4
+ 
+mb-0
+ 
+<div className=" my-4">
+<h3 className=" bg-gradient-to-b from-zinc-600 to-zinc-500 dark:from-zinc-400 dark:to-zinc-500 bg-clip-text text-transparent text-2xl mb-0">
+" If we provide an alternative vehicle from outside of Gojek, Then the user still gets the driver and the driver keeps getting bids and so increasing the acceptance rate. "
+</h3>
+</div>
+ 
+bg-gradient-to-br from-pink-500 to-indigo-500 dark:from-pink-500 dark:to-indigo-500 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0 font-semibold
+ 
+<div className=" my-4">
+<h3 className=" bg-gradient-to-b from-zinc-600 to-zinc-500 dark:from-zinc-400 dark:to-zinc-500 bg-clip-text text-transparent text-2xl mb-0">
+" How might we provide a solution to users when booking transport in the high demand traffic? "
+</h3>
+</div>
+ 
+
+<h3 className=" bg-gradient-to-br from-blue-600 to-teal-500 dark:from-blue-500 dark:to-teal-400 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0">
+
+</h3>
+ 
+
+<h3 className=" bg-gradient-to-br from-green-600 to-sky-500 dark:from-sky-600 dark:to-pink-500 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0 leading-tight">
+
+</h3>
+ 
+
+<h3 className=" bg-gradient-to-br from-green-600 to-sky-500 dark:from-sky-600 dark:to-pink-500 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0 leading-tight">
+
+</h3>
+ 
+
+<h3 className=" bg-gradient-to-b from-green-600 to-sky-400 dark:from-green-400 dark:to-sky-300 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0">
+
+</h3>
+ 
+
+<h3 className=" bg-gradient-to-br from-pink-500 to-indigo-500  dark:from-pink-500 dark:to-indigo-500 bg-clip-text text-transparent text-3xl lg:text-4xl mb-8">
+
+</h3>
+ 
+
+<div>
+
+<h3 className=" bg-gradient-to-br from-pink-500 to-indigo-500  dark:from-pink-500 dark:to-indigo-500 bg-clip-text text-transparent text-3xl lg:text-4xl mb-8">
+This project aims to build a strong foundation for multichannel chatting, incorporating seamless self-sign-up, Business Dashboard migration, ensuring a delightful SaaS experience, and implementing automated payments.
+</h3>
+</div>
+ 
+<h3 className=" bg-gradient-to-b from-green-600 to-sky-400 dark:from-green-400 dark:to-sky-300 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0">
+This project achieved a 1.7x improvement in BCR in Jabodetabek and a 1.5x improvement in non-Jabo, along with a 50% reduction in CADF and a 50% reduction in pickup distance, significantly enhancing the user experience and system efficiency.
+</h3>
+ 
+
+<h3 className=" bg-gradient-to-br from-pink-500 to-indigo-500  dark:from-pink-500 dark:to-indigo-500 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0">
+Design Lint cut Gojek's work by 60%, and boosted issue-spotting by 26%, saving 4,259 hours and $93,709 annually. It's a big efficiency and cost win.
+</h3>
+ 
+    font-weight:600;
+ 
+mb-0
+ 
+  .prose :where(p):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+   
+}
+ 
+<div>
+      <p className="mb-0 font-medium text-lg dark:text-zinc-300">Impact</p>
+      <h3 className="bg-gradient-to-br from-pink-500 to-indigo-500 dark:from-pink-500 dark:to-indigo-500 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0">
+  tes
+      </h3>
+    </div>
+ 
+      {children}
+ 
+import Impact from "@/components/impact";
+ 
+  <Impact>
+    Design Lint cut Gojek's work by 60%, and boosted issue-spotting by 26%, saving 4,259 hours and $93,709 annually. It's a big efficiency and cost win.
+  </Impact>
+
+ 
+p {
+    @apply
+  }
+
+ 
+ .prose-vercel :where(p):not(:where([class~=not-prose] *)) {
+
+    @apply mt-0
+  }
+ 
+@apply 
+ 
+ mb-0 text-lg font-[400] leading-8
+ 
+</>
+ 
+<>
+ 
+import React, { ReactNode } from 'react';
+
+interface ImpactProps {
+  children: ReactNode;
+}
+
+const Impact: React.FC<ImpactProps> = ({ children }) => {
+  return (
+    <div>
+      <p className="mb-0 font-medium text-lg dark:text-zinc-300">Impact</p>
+      <h3 className="bg-gradient-to-br from-pink-500 to-indigo-500 dark:from-pink-500 dark:to-indigo-500 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0" dangerouslySetInnerHTML={{ __html: children.toString() }}>
+      </h3>
+    </div>
+  );
+};
+
+export default Impact;
+
+ 
+  .p{}
+
+ 
+lg:text-4xl mb-0
+ 
+margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 2rem;
+ 
+}}
+ 
+{{
+ 
+Component
+ 
+  Design Lint, a tool aligned with Asphalt Aloha Design System, reduced Gojek's work by 60%, increased issue-spotting by 26%, saving 4,259 hours and $93,709 annually for a significant efficiency and cost win.
+</Impact>
+ 
+
+
+User
+hi
+ChatGPT
+Hello! How can I assist you today?
+
+User
+I have mdx file in next js
+
+---
+title: Asphalt Design Lint - Design tool for Figma plugin
+description: Design Lint is a Figma plugin tool that aids designers in identifying and resolving design issues, ensuring alignment with the Asphalt Aloha Design System, aiming to save time and enhance collaboration with engineers.
+impact: Design Lint, a tool aligned with Asphalt Aloha Design System, reduced Gojek's work by 60%, increased issue-spotting by 26%, saving 4,259 hours and $93,709 annually for a significant efficiency and cost win.
+date: "2023"
+image: /lint/lint-cover.png
+company_profile: /company/gojek.png
+company_name: Gojek
+selected: true
+---
+
+
+
+
+<div>
+<p className="mb-0 font-medium text-lg dark:text-zinc-300">Impact</p>
+
+<h3 className=" bg-gradient-to-br from-pink-500 to-indigo-500  dark:from-pink-500 dark:to-indigo-500 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0">
+Design Lint cut Gojek's work by 60%, and boosted issue-spotting by 26%, saving 4,259 hours and $93,709 annually. It's a big efficiency and cost win.
+</h3>
+</div>
+
+---
+
+but result in my html is
+<div><p class="mb-0 font-medium text-lg dark:text-zinc-300">Impact</p><h3 class=" bg-gradient-to-br from-pink-500 to-indigo-500  dark:from-pink-500 dark:to-indigo-500 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0"><p>Design Lint cut Gojek's work by 60%, and boosted issue-spotting by 26%, saving 4,259 hours and $93,709 annually. It's a big efficiency and cost win.</p></h3></div>
+
+why?
+ChatGPT
+The issue you're encountering might be related to the way Markdown is processed in Next.js. Markdown is usually transformed into HTML by default, and the resulting HTML might not always match your expectations, especially when dealing with custom React components.
+
+In your case, it looks like the Markdown processor is treating the HTML within the --- as a block of raw HTML and not processing it as JSX. To resolve this, you can use the dangerouslySetInnerHTML attribute in React to render the HTML as-is. Here's an example of how you can modify your JSX:
+
+jsx
+Copy code
+import React from 'react';
+
+const YourComponent = () => {
+  const mdxContent = `
+---
+title: Asphalt Design Lint - Design tool for Figma plugin
+description: Design Lint is a Figma plugin tool that aids designers in identifying and resolving design issues, ensuring alignment with the Asphalt Aloha Design System, aiming to save time and enhance collaboration with engineers.
+impact: Design Lint, a tool aligned with Asphalt Aloha Design System, reduced Gojek's work by 60%, increased issue-spotting by 26%, saving 4,259 hours and $93,709 annually for a significant efficiency and cost win.
+date: "2023"
+image: /lint/lint-cover.png
+company_profile: /company/gojek.png
+company_name: Gojek
+selected: true
+---
+
+<div>
+<p className="mb-0 font-medium text-lg dark:text-zinc-300">Impact</p>
+
+<h3 className=" bg-gradient-to-br from-pink-500 to-indigo-500  dark:from-pink-500 dark:to-indigo-500 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0">
+Design Lint cut Gojek's work by 60%, and boosted issue-spotting by 26%, saving 4,259 hours and $93,709 annually. It's a big efficiency and cost win.
+</h3>
+</div>
+`;
+
+  const htmlContent = mdxContent.split('---')[2].trim();
+
+  return (
+    <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+  );
+};
+
+export default YourComponent;
+Note that using dangerouslySetInnerHTML should be done with caution, as it can expose your application to cross-site scripting (XSS) attacks if not used carefully. Ensure that the HTML content you're rendering is safe from user input or sanitize it appropriately if necessary.
+
+User
+<div>
+<p className="mb-0 font-medium text-lg dark:text-zinc-300">Impact</p>
+
+<h3 className=" bg-gradient-to-br from-pink-500 to-indigo-500  dark:from-pink-500 dark:to-indigo-500 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0">
+Design Lint cut Gojek's work by 60%, and boosted issue-spotting by 26%, saving 4,259 hours and $93,709 annually. It's a big efficiency and cost win.
+</h3>
+</div>
+
+please make it component and import to my mdx with content layer
+ChatGPT
+Certainly! You can create a React component for the content you provided and then import that component into your MDX file. Here's an example:
+
+Create a new file, for example, ImpactComponent.js:
+
+jsx
+Copy code
+// ImpactComponent.js
+import React from 'react';
+
+const ImpactComponent = () => {
+  return (
+    <div>
+      <p className="mb-0 font-medium text-lg dark:text-zinc-300">Impact</p>
+
+      <h3 className="bg-gradient-to-br from-pink-500 to-indigo-500 dark:from-pink-500 dark:to-indigo-500 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0">
+        Design Lint cut Gojek's work by 60%, and boosted issue-spotting by 26%, saving 4,259 hours and $93,709 annually. It's a big efficiency and cost win.
+      </h3>
+    </div>
+  );
+};
+
+export default ImpactComponent;
+Now, you can import this component into your MDX file:
+
+jsx
+Copy code
+// YourMDXFile.mdx
+---
+title: Asphalt Design Lint - Design tool for Figma plugin
+description: Design Lint is a Figma plugin tool that aids designers in identifying and resolving design issues, ensuring alignment with the Asphalt Aloha Design System, aiming to save time and enhance collaboration with engineers.
+impact: Design Lint, a tool aligned with Asphalt Aloha Design System, reduced Gojek's work by 60%, increased issue-spotting by 26%, saving 4,259 hours and $93,709 annually for a significant efficiency and cost win.
+date: "2023"
+image: /lint/lint-cover.png
+company_profile: /company/gojek.png
+company_name: Gojek
+selected: true
+---
+
+import ImpactComponent from './path-to-your-component/ImpactComponent';
+
+<ImpactComponent />
+Make sure to replace './path-to-your-component/ImpactComponent' with the correct path to your ImpactComponent.js file.
+
+This way, you keep your MDX file clean and organized, and you can reuse the ImpactComponent in other parts of your application if needed.
+
+User
+how to make this Design Lint cut Gojek's work by 60%, and boosted issue-spotting by 26%, saving 4,259 hours and $93,709 annually. It's a big efficiency and cost win. dinamis
+ChatGPT
+If you want to make the content dynamic, you can pass the values as props to your ImpactComponent. Here's an updated example:
+
+jsx
+Copy code
+// ImpactComponent.js
+import React from 'react';
+
+const ImpactComponent = ({ cutWork, boostedIssueSpotting, savingHours, savingAmount }) => {
+  return (
+    <div>
+      <p className="mb-0 font-medium text-lg dark:text-zinc-300">Impact</p>
+
+      <h3 className="bg-gradient-to-br from-pink-500 to-indigo-500 dark:from-pink-500 dark:to-indigo-500 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0">
+        Design Lint cut Gojek's work by {cutWork}%, and boosted issue-spotting by {boostedIssueSpotting}%, saving {savingHours} hours and ${savingAmount} annually. It's a big efficiency and cost win.
+      </h3>
+    </div>
+  );
+};
+
+export default ImpactComponent;
+Now, when you import and use ImpactComponent in your MDX file, you can pass dynamic values as props:
+
+jsx
+Copy code
+// YourMDXFile.mdx
+---
+title: Asphalt Design Lint - Design tool for Figma plugin
+description: Design Lint is a Figma plugin tool that aids designers in identifying and resolving design issues, ensuring alignment with the Asphalt Aloha Design System, aiming to save time and enhance collaboration with engineers.
+impact:
+  cutWork: 60
+  boostedIssueSpotting: 26
+  savingHours: 4259
+  savingAmount: 93709
+date: "2023"
+image: /lint/lint-cover.png
+company_profile: /company/gojek.png
+company_name: Gojek
+selected: true
+---
+
+import ImpactComponent from './path-to-your-component/ImpactComponent';
+
+<ImpactComponent
+  cutWork={60}
+  boostedIssueSpotting={26}
+  savingHours={4259}
+  savingAmount={93709}
+/>
+In this example, the values are hardcoded, but in a real-world scenario, you might fetch these values from an API, a database, or any other data source that suits your application.
+
+User
+No I mean make the H3 content is dynamic
+ChatGPT
+I see, if you want to make the content of the <h3> dynamic, you can pass a dynamic string as a prop. Here's how you can modify the ImpactComponent:
+
+jsx
+Copy code
+// ImpactComponent.js
+import React from 'react';
+
+const ImpactComponent = ({ impactText }) => {
+  return (
+    <div>
+      <p className="mb-0 font-medium text-lg dark:text-zinc-300">Impact</p>
+
+      <h3 className="bg-gradient-to-br from-pink-500 to-indigo-500 dark:from-pink-500 dark:to-indigo-500 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0">
+        {impactText}
+      </h3>
+    </div>
+  );
+};
+
+export default ImpactComponent;
+Now, in your MDX file, you can pass the dynamic text as a prop:
+
+jsx
+Copy code
+// YourMDXFile.mdx
+---
+title: Asphalt Design Lint - Design tool for Figma plugin
+description: Design Lint is a Figma plugin tool that aids designers in identifying and resolving design issues, ensuring alignment with the Asphalt Aloha Design System, aiming to save time and enhance collaboration with engineers.
+impactText: "Design Lint cut Gojek's work by 60%, and boosted issue-spotting by 26%, saving 4,259 hours and $93,709 annually. It's a big efficiency and cost win."
+date: "2023"
+image: /lint/lint-cover.png
+company_profile: /company/gojek.png
+company_name: Gojek
+selected: true
+---
+
+import ImpactComponent from './path-to-your-component/ImpactComponent';
+
+<ImpactComponent impactText={impactText} />
+By doing this, you can customize the content of the <h3> dynamically by changing the value of the impactText prop in your MDX file.
+
+User
+Binding element 'impactText' implicitly has an 'any' type.ts(7031)
+(parameter) impactText: any
+
+I use tsx
+ChatGPT
+Certainly! To handle TypeScript, you should define the type of your props. Let's adjust the ImpactComponent file:
+
+tsx
+Copy code
+// ImpactComponent.tsx
+import React from 'react';
+
+interface ImpactComponentProps {
+  impactText: string;
+}
+
+const ImpactComponent: React.FC<ImpactComponentProps> = ({ impactText }) => {
+  return (
+    <div>
+      <p className="mb-0 font-medium text-lg dark:text-zinc-300">Impact</p>
+
+      <h3 className="bg-gradient-to-br from-pink-500 to-indigo-500 dark:from-pink-500 dark:to-indigo-500 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0">
+        {impactText}
+      </h3>
+    </div>
+  );
+};
+
+export default ImpactComponent;
+Now, in your MDX file, when you import and use ImpactComponent, TypeScript will enforce that you pass a prop of type string:
+
+tsx
+Copy code
+// YourMDXFile.mdx
+---
+title: Asphalt Design Lint - Design tool for Figma plugin
+description: Design Lint is a Figma plugin tool that aids designers in identifying and resolving design issues, ensuring alignment with the Asphalt Aloha Design System, aiming to save time and enhance collaboration with engineers.
+impactText: "Design Lint cut Gojek's work by 60%, and boosted issue-spotting by 26%, saving 4,259 hours and $93,709 annually. It's a big efficiency and cost win."
+date: "2023"
+image: /lint/lint-cover.png
+company_profile: /company/gojek.png
+company_name: Gojek
+selected: true
+---
+
+import ImpactComponent from './path-to-your-component/ImpactComponent';
+
+<ImpactComponent impactText={impactText} />
+This way, TypeScript will expect impactText to be a string, and you won't encounter implicit any type errors.
+
+User
+---
+title: Asphalt Design Lint - Design tool for Figma plugin
+description: Design Lint is a Figma plugin tool that aids designers in identifying and resolving design issues, ensuring alignment with the Asphalt Aloha Design System, aiming to save time and enhance collaboration with engineers.
+impact: Design Lint, a tool aligned with Asphalt Aloha Design System, reduced Gojek's work by 60%, increased issue-spotting by 26%, saving 4,259 hours and $93,709 annually for a significant efficiency and cost win.
+date: "2023"
+image: /lint/lint-cover.png
+company_profile: /company/gojek.png
+company_name: Gojek
+selected: true
+---
+
+
+import Impact from "@/components/impact";
+
+{/* <div>
+<p className="mb-0 font-medium text-lg dark:text-zinc-300">Impact</p>
+
+<h3 className=" bg-gradient-to-br from-pink-500 to-indigo-500  dark:from-pink-500 dark:to-indigo-500 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0">
+Design Lint cut Gojek's work by 60%, and boosted issue-spotting by 26%, saving 4,259 hours and $93,709 annually. It's a big efficiency and cost win.
+</h3>
+</div> */}
+
+<Impact ImpactText=""/>
+
+
+here how to make the impacttext from impact
+ChatGPT
+If you want to extract the impact text from your frontmatter and pass it to your Impact component, you can do something like this:
+
+Assuming you have a file structure like this:
+
+plaintext
+Copy code
+/src
+  /components
+    Impact.tsx
+  /pages
+    YourMDXFile.mdx
+Here is how you can structure your files:
+
+tsx
+Copy code
+// Impact.tsx
+import React from 'react';
+
+interface ImpactProps {
+  impactText: string;
+}
+
+const Impact: React.FC<ImpactProps> = ({ impactText }) => {
+  return (
+    <div>
+      <p className="mb-0 font-medium text-lg dark:text-zinc-300">Impact</p>
+
+      <h3 className="bg-gradient-to-br from-pink-500 to-indigo-500 dark:from-pink-500 dark:to-indigo-500 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0">
+        {impactText}
+      </h3>
+    </div>
+  );
+};
+
+export default Impact;
+And in your MDX file:
+
+tsx
+Copy code
+// YourMDXFile.mdx
+---
+title: Asphalt Design Lint - Design tool for Figma plugin
+description: Design Lint is a Figma plugin tool that aids designers in identifying and resolving design issues, ensuring alignment with the Asphalt Aloha Design System, aiming to save time and enhance collaboration with engineers.
+impact: Design Lint, a tool aligned with Asphalt Aloha Design System, reduced Gojek's work by 60%, increased issue-spotting by 26%, saving 4,259 hours and $93,709 annually for a significant efficiency and cost win.
+date: "2023"
+image: /lint/lint-cover.png
+company_profile: /company/gojek.png
+company_name: Gojek
+selected: true
+---
+
+import Impact from "@/components/Impact";
+
+<Impact impactText={impact} />
+In this example, impact is directly accessed from the frontmatter of the MDX file. Make sure your MDX setup allows for accessing frontmatter properties like this. The Impact component receives the impactText prop, and you're able to pass the dynamic content to it.
+
+User
+can we make the impact text straight foward?
+for ex
+<Impact>text</Impact>
+
+how?
+ChatGPT
+Certainly! If you want to directly include the impact text within the <Impact> component in your MDX file, you can do so by utilizing the children prop. Here's how you can modify your Impact component and MDX file:
+
+tsx
+Copy code
+// Impact.tsx
+ 
+{impact}
+ 
+import Impact
+ 
+Component
+ 
+Component
+ 
+font-[450]
+ 
+font-[450]
+ 
+ font-ibm 
+ 
+ margin-top: 1.25em;
+    margin-bottom: 1.25em;
+ 
+text-lg leading-8
+ 
+ont-ibm 
+ 
+-vercel
+ 
+ font-normal 
+ 
+text-base
+ 
+prose 
+ 
+<style>
+ 
+</style>
+ 
+</style>
+ 
+<style>
+ 
+
+
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&display=swap');
+
+
+ 
+font-noto
+ 
+<style>
+ 
+</style>
+ 
+</style>
+ 
+<style>
+ 
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+ 
+</style>
+ 
+<style>
+ 
+@import url(<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+</style>);
+ 
+import { PT_Serif } from "next/font/google"
+
+const inter = PT_Serif({ weight: subsets: ["latin"] })
+
+ 
+    <Image />
+ 
+x-10
+ 
+ max-w-3xl
+ 
+mt-14 
+ 
+const router = useRouter();
+ 
+max-w-4xl
+ 
+max-w-3xl
+ 
+ mx-10
+ 
+x-4
+ 
+backdrop-blur-md
+ 
+teal-500 
+ 
+ bg-slate-400 
+ 
+active-link
+ 
+          <ModeToggle />
+ 
+ {
+      title: "Component",
+      path: "/doc/component",
+    },
+ 
+oundation
+ 
+import Link from 'next/link';
+
+ 
+  const router = useRouter();
+ 
+import { useRouter } from 'next/router';
+ 
+    <nav className="py-2 mx-auto flex justify-between items-center">
+    <Link href="/" className={`hover:text-teal-500 ${router.pathname === '/' ? 'text-teal-500' : ''}`}>
+      <Image 
+        src="/mj.png"
+        width={40}
+        height={40}
+        alt="emje"
+      />
+    </Link>
+    <ul className="flex items-center gap-6 font-medium">
+      <li><Link href="/" className={`hover:text-teal-500 ${router.pathname === '/' ? 'text-teal-500' : ''}`}>Home</Link></li>
+      <li><Link href="/about" className={`hover:text-teal-500 ${router.pathname === '/about' ? 'text-teal-500' : ''}`}>About</Link></li>
+      <li><Link href="/case" className={`hover:text-teal-500 ${router.pathname === '/case' ? 'text-teal-500' : ''}`}>Case studies</Link></li>
+    </ul>
+    <ModeToggle />
+  </nav>
+ 
+  const router = useRouter();
+ 
+import { useRouter } from 'next/navigation'
+ 
+navbar,
+ 
+text-[0.875rem] 
+ 

@@ -6,7 +6,7 @@ const Company = () => {
   return (
    
      <div className="flex flex-col items-center space-y-4">
-      <h4 className="text-zinc-500 dark:text-zinc-500 mb-0 font-medium">Company experiences</h4>
+      <h4 className="text-zinc-500 dark:text-zinc-500 mb-0 font-medium">7+ years of professional experience.</h4>
       <div className="flex -space-x-2 mt-0">
         <Link href="https://www.gojek.com/id-id/">
         <Image

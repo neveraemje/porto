@@ -31,6 +31,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated"
-  ],
+, "components/case2.jsx", "components/case2.jsx"  ],
   "exclude": ["node_modules"]
 }

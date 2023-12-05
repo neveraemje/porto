@@ -26,7 +26,7 @@
 
   .prose :where(p):not(:where([class~=not-prose] *)) {
 
-    @apply   text-lg font-[400] leading-8 mt-3 mb-3
+    @apply text-lg font-[400] leading-8 mt-3 mb-3 
   }
   .prose :where(ul):not(:where([class~="not-prose"], [class~="not-prose"] *)){
     @apply mt-0 mb-0 text-lg font-[400] leading-8

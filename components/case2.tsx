@@ -16,7 +16,7 @@ export const CaseStudies = () => {
   });
 
   return (
-<div className="flex flex-col gap-4 mt-14 max-w-3xl sm:mx-4" >
+<div className="flex flex-col gap-4 mt-6 max-w-3xl sm:mx-4" >
 
         
   <ul className="flex flex-col gap-9 pl-0">

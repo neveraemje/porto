@@ -15,7 +15,7 @@ export default function Home() {
     
 
 <div className="prose dark:prose-invert max-w-3xl mx-4">
-<section className=" flex flex-col items-center gap-8 lg:mt-14 mb-14">
+<section className=" flex flex-col items-center gap-8  mb-14 sm:mt-14 mt-10">
   <div className=" flex flex-col justify-center items-center gap-6 text-center">
     <h1 className=" max-w-2xl bg-gradient-to-b from-zinc-700 to-zinc-500 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent text-3xl lg:text-5xl mb-0"> Product Designer & Code Enthusiast</h1>
     <h5 className=" max-w-2xl text-zinc-600 dark:text-zinc-400 font-medium lg:px-10 sm:px0">I am Emje, a product designer from Indonesia with seven years of design experience. Currently working as a Product Designer at the Gojek Design Team 🪄✨🏕️.</h5>

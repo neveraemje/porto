@@ -30,13 +30,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={`antialiased min-h-scree bg-white dark:bg-zinc-900 text-gray-800 dark:text-slate-50 ${inter.className}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="max-w-3xl mx-auto py-10">
-            <header className="sticky top-0  main-header backdrop-blur-3xl bg-header py-3">
+          <div className="max-w-screen mx-auto">
+            
+            <header className="sticky top-0  backdrop-blur-xl py-2 z-50">
 
              <NavBar/>
            
             </header>
-            <main>{children}</main>
+            
+            <main className="max-w-3xl mx-auto">{children}</main>
             <Footer/>
           </div>
           <Analytics />
