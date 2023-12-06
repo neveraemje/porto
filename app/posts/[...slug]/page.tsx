@@ -96,15 +96,22 @@ export default async function PostPage({ params }: PostProps) {
       <article className="py-6 prose dark:prose-invert max-w-4xl prose-vercel mx-4">
       <div className="flex flex-col md:flex-row gap-1">
         <div className="w-full md:w-1/4 ">
-          <div className="f">
-            <div className="">Published at</div>
+          <div className="">
+            <div className=" text-sm">Published at</div>
             <div className=" flex items-center gap-2">
-          <div className=" font-medium text-base">{post.date}</div> 
+          <div className=" font-semibold text-base">{post.date}</div> 
             </div>
           </div>
 
           <div className="mt-4">
-          <div className="">Company</div>
+            <div className="text-sm">Project type</div>
+            <div className=" flex items-center gap-2">
+          <div className=" font-semibold text-base">{post.project}</div> 
+            </div>
+          </div>
+
+          <div className="mt-4">
+          <div className="text-sm">Company</div>
             <div className=" flex items-center gap-2">
             <img
             src={post.company_profile}
@@ -114,9 +121,12 @@ export default async function PostPage({ params }: PostProps) {
             title="Gojek"
             className=" my-2"
             />
-          <div className=" font-medium">{post.company_name}</div> 
+          <div className=" font-semibold">{post.company_name}</div> 
             </div>
           </div>
+
+         
+
         </div>
 
         <hr className=" lg:hidden" />

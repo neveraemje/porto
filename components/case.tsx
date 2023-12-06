@@ -11,7 +11,7 @@ export const Case = () => {
 <div >
     
   <div className=" justify-between flex items-center">
-    <h2 className=" text-2xl font-semibold my-0 text-zinc-800 dark:text-zinc-200">Selected case studies</h2>
+    <h2 className=" text-xl font-semibold my-0 text-zinc-800 dark:text-zinc-200">Selected case studies</h2>
     <Link href="/case" className=" text-teal-600 dark:text-teal-500 hover:underline flex items-center gap-1 no-underline">See all<HiChevronRight/> </Link>
   </div>
 
@@ -26,7 +26,12 @@ export const Case = () => {
           <div className="flex flex-col gap-1">
             <h3 className="text-zinc-800 dark:text-zinc-200 text-xl font-semibold my-0">{post.title}</h3>
             <p className="text-zinc-600 dark:text-zinc-400 my-2">{post.impact}</p>
-            <Image src={post.image!} width={718} height={404} alt="Image" className="mt-0 mb-4" />
+            {/* <Image src={post.image!} width={718} height={404} alt="Image" className="mt-0 mb-4" /> */}
+            <div className="relative cursor-pointer overflow-hidden">
+                      <div className="transition-transform transform origin-center group-hover:scale-105 duration-300">
+                        <Image src={post.image!} width={718} height={404} alt="Image" className="mt-0 mb-4" />
+                      </div>
+                    </div>
            
           {/* <p className="text-gray-700 dark:text-zinc-400 my-2">{post.impact}</p> */}
           <Link href={post.slug} className=" text-teal-600 dark:text-teal-500 hover:underline flex items-center gap-1 no-underline"> Read case study <HiChevronRight/></Link>

@@ -3,12 +3,13 @@ import React from 'react'
 const Footer = () => {
   return (
     <div className=" max-w-3xl mx-auto border-t mt-14 border-zinc-200 dark:border-zinc-700">
+    
     <div className='flex flex-col items-center mt-14 mb-14'>
       
       <h3 className='mb-2 dark:text-zinc-400 text-zinc-600'>Get in touch to collaboration</h3>
       <a className="group flex items-center text-xl font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500" href="mailto:neveraemje@gmail.com">
       <svg viewBox="0 0 24 24" aria-hidden="true" className="h-7 w-7 flex-none fill-zinc-500 transition group-hover:fill-teal-500">
-      <path fill-rule="evenodd" d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"></path>
+      <path fillRule="evenodd" d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"></path>
       </svg>
       <span className="ml-2">neveraemje@gmail.com</span>
       </a>
