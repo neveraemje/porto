@@ -234,10 +234,10 @@ const page = () => {
           </div>
 
           <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700 text-justify">
-            Hi, I'm Emje, a product designer from Indonesia. I graduated in
+            Hi, I am Emje, a product designer from Indonesia. I graduated in
             Informatics Engineering, which laid the foundation for my skills in
             blending design, tech, human aspects, and business strategy. Over
-            the past 7+ years, I've worked in diverse roles across software
+            the past 7+ years, I have worked in diverse roles across software
             houses, AI companies, on-demand services, SaaS, B2B, and B2C.
           </p>
           <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700 text-justify">
@@ -276,7 +276,7 @@ const page = () => {
             rebranding, and creating the Aksara Design System.
           </p>
           <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700 text-justify">
-            Currently, I'm a Product Designer at
+            Currently, I am a Product Designer at
             <span className="not-prose inline-flex mx-2">
               <a
                 href="https://www.gojek.com/en-id/"
@@ -287,13 +287,13 @@ const page = () => {
               </a>
             </span>
             , involved in evolving the Asphalt Design System, standardizing 18+
-            products, and enabling designers to leverage our system. We've also
+            products, and enabling designers to leverage our system. We have also
             built an in-house Figma plugin and a central hub for design system
             documentation, saving considerable time and costs annually.
           </p>
           <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700 text-justify">
             Through my journey, I see design as a constant learning process,
-            like a traveler exploring an unknown path. It's a bit like a
+            like a traveler exploring an unknown path. It is a bit like a
             challenging hike, where patience and resilience are key to reaching
             success.
           </p>
