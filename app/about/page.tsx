@@ -190,9 +190,7 @@ const page = () => {
     <div className=" flex flex-col">
         <div className=" flex flex-col justify-center items-center gap-2 text-center">
           <h1 className=" font-semibold bg-gradient-to-b from-zinc-700 to-zinc-500 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent text-3xl lg:text-3xl mb-0">
-            A Product Designer, with +7 years of experience, specializes in
-            crafting stable user-centered design and scalable software systems
-            for businesses.{" "}
+          A seasoned Product Designer with over 7 years of experience, specializing in creating robust user-centered designs and comprehensive design systems for businesses.
           </h1>
           <div className="columns-2 sm:columns-3 gap-4 mt-6 z-20">
             <div className=" h-40 w-full relative hidden sm:block mb-4">
