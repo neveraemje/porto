@@ -1,22 +1,64 @@
 
-import Link from "next/link"
+
 import "./globals.css"
 
-import { DM_Sans } from "next/font/google"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Analytics } from "@/components/analytics"
-import { ModeToggle } from "@/components/mode-toggle"
-import Image from "next/image"
+
 import Footer from "@/components/Footer"
 import NavBar from "@/components/navbar";
+import { Metadata } from "next"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata = {
-  title: "Neveraemje",
-  description: "A Product Designer, with +7 years of experience, specializes in crafting stable user-centered design and scalable software systems for businesses.",
-}
+// export const metadata = {
+//   title: "Neveraemje",
+//   description: "A Product Designer, with +7 years of experience, specializes in crafting stable user-centered design and scalable software systems for businesses.",
+// }
+
+export const metadata: Metadata = {
+  title: {
+    default: "emje.vercel.app",
+    template: "%s | emje.vercel.app",
+  },
+  description: "A Product Designer and Coding Enthusiast with 7+ years of experience",
+  openGraph: {
+    title: "emje.vercel.app",
+    description:
+      "A Product Designer and Coding Enthusiast with 7+ years of experience",
+    url: "https://emje.vercel.app/",
+    siteName: "emje.vercel.app",
+    images: [
+      {
+        url: "https://emje.vercel.app/thumbnail.png",
+        width: 1920,
+        height: 1080,
+      },
+    ],
+    locale: "en-US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  twitter: {
+    title: "neveraemje",
+    card: "summary_large_image",
+  },
+  icons: {
+    shortcut: "/mj.png",
+  },
+};
+
 
 interface RootLayoutProps {
   children: React.ReactNode
