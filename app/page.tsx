@@ -16,7 +16,24 @@ export default function Home() {
            <section className=" flex flex-col items-center gap-8  mb-14 sm:mt-14 mt-10">
   <div className=" flex flex-col justify-center items-center gap-6 text-center">
     <h1 className=" max-w-2xl bg-gradient-to-b from-zinc-700 to-zinc-500 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent text-3xl lg:text-5xl mb-0"> Product Designer & Coding Enthusiast</h1>
-    <h5 className=" max-w-2xl text-zinc-600 dark:text-zinc-400 font-medium lg:px-10 sm:px0">I am Emje, a product designer from Indonesia with seven years of design experience. Currently working as a Product Designer at the Gojek Design Team 🪄✨🏕️.</h5>
+    <h5 className=" max-w-2xl text-zinc-600 dark:text-zinc-400 font-medium lg:px-10 sm:px0">
+      {/* I am Emje, a product designer from Indonesia with seven years of design experience. Currently working as a Product Designer at the Gojek Design Team 🪄✨🏕️.
+       */}
+
+I am Emje, a Product Designer and coding enthusiast from Indonesia, navigating a seven-year design journey. 
+
+Currently shaping experiences at <span className="not-prose inline-flex mx-1">
+              <a
+                href="https://www.gojek.com/en-id/"
+                target="_blank"
+                className="underline decoration-green-600 font-semibold decoration-2"
+              >
+                Gojek
+              </a>
+            </span> as a Product Designer in the Design System team. 🪄✨🏕️☕
+
+      
+      </h5>
 
     <Button  href="/about">About us</Button>
    
