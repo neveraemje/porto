@@ -17,12 +17,16 @@ const NavBar = () => {
       path: "/",
     },
     {
-      title: "About us",
+      title: "About",
       path: "/about",
     },
     {
       title: "Case studies",
       path: "/case",
+    },
+    {
+      title: "Guestbook",
+      path: "/guestbook",
     },
   ];
 
@@ -39,10 +43,15 @@ const NavBar = () => {
       />
     </Link>
 
-      <ul className="flex items-center gap-1 font-medium text-sm text-zinc-600 dark:text-zinc-400">
+      <ul className="flex items-center font-medium text-sm text-zinc-600 dark:text-zinc-400">
         {menu.map((item, index) => (
             <li key={index}>
-              <Link href={item.path} className={`hover:text-zinc-800 dark:hover:text-zinc-100 px-4 py-2 rounded-full bg-transparent${pathname == item.path ? " text-zinc-800 dark:text-zinc-100 bg-zinc-200/50 dark:bg-zinc-800" : "nav-menu"}`}
+              <Link href={item.path} className={`
+              hover:text-zinc-800 dark:hover:text-zinc-100  sm:px-4 sm:py-2 px-3 py-2 rounded-full bg-transparent${pathname == item.path 
+                ? 
+                " text-zinc-800 dark:text-zinc-100 bg-zinc-200/50 dark:bg-zinc-800" 
+                : 
+                "nav-menu" }`}
                 aria-current={pathname == item.path ? "page" : undefined}>
                 {item.title}
               </Link>
