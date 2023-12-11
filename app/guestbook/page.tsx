@@ -69,16 +69,21 @@ const guestData = async() => {
 
 export default async function GuestBook() {
 
-    const data = await guestData()
-    interface Props  {
-        name: string;
-        photo: string;
-        msg: string;
-        _id: string;
-        date?: string;
-        timestamp: number;
-      };
+  interface Props  {
+    name: string;
+    photo: string;
+    msg: string;
+    _id: string;
+    date?: string;
+    timestamp: number;
+  };
 
+
+    const data = await guestData()
+    if (!data) {
+      return <div>Loading getting the data...</div>;
+    }
+    
         
     return (
         <div className="prose dark:prose-invert max-w-3xl sm:mt-14 mt-10 mx-6 sm:mx-6">
@@ -95,7 +100,7 @@ export default async function GuestBook() {
 
   <ul className=" space-y-4 mt-0 pl-0">
   
-  {data.guest.slice().reverse().map((tamu: Props) => (
+  {data && data.guest && data.guest.slice().reverse().map((tamu: Props) => (
 
       <li className="flex gap-4 " key={tamu._id}>
         <div className="relative mt-1 flex h-9 w-9 flex-none items-center justify-center rounded-full">
