@@ -34,6 +34,7 @@ function Form() {
           if (res.ok) {
             setMsg("")
             router.push('/guestbook');
+            window.location.reload();
           } else {
             throw new Error('Failed to sign in the guestbook');
           }
@@ -135,7 +136,7 @@ export default function UserInfo() {
           </h1>
 
     <p className=" text-center mx-6 text-sm  pt-0">
-        Excited to have you here! Share your thoughts to sign the guestbook.
+        Excited to have you here! Leave nothing except your signature message.
     </p>
     <div className=" mx-0 sm:mx-10">
             <Form/>
@@ -151,8 +152,10 @@ export default function UserInfo() {
              <h1 className=" text-2xl font-semibold bg-gradient-to-b from-zinc-700 to-zinc-500 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent  mb-0">
           Sign in to my guestbook
           </h1> 
-          <p className=" text-sm">Your information is stored securely and used exclusively to enhance your guestbook experience.</p>
+          <p className="text-sm">If a traveler has the principle to take nothing but photos, leave nothing but footprints,  there is an exception:  <strong>leaving nothing but your signature message.</strong></p>
+        
           <SignInButton/>
+          <div className=" text-sm mt-2 text-zinc-500 dark:text-zinc-400">*Your data is secure, used only to improve your guestbook experience.</div>
           <hr />
            
             </section>
