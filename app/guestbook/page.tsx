@@ -5,54 +5,54 @@ import { NextAuthProvider } from "../provider";
 import { Metadata } from "next"
 
 
-export const metadata: Metadata = {
-    title: {
-      default: "emje.vercel.app",
-      template: "%s | emje.vercel.app",
-    },
-    description: "A Product Designer and Coding Enthusiast with 7+ years of experience",
-    openGraph: {
-      title: "emje.vercel.app",
-      description:
-        "A Product Designer and Coding Enthusiast with 7+ years of experience",
-      url: "https://emje.vercel.app/",
-      siteName: "emje.vercel.app",
-      images: [
-        {
-          url: "https://emje.vercel.app/thumbnail.png",
-          width: 1920,
-          height: 1080,
-        },
-      ],
-      locale: "en-US",
-      type: "website",
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-video-preview": -1,
-        "max-image-preview": "large",
-        "max-snippet": -1,
-      },
-    },
-    twitter: {
-      title: "neveraemje",
-      card: "summary_large_image",
-    },
-    icons: {
-      shortcut: "/mj.png",
-    },
-  };
+// export const metadata: Metadata = {
+//     title: {
+//       default: "emje.vercel.app",
+//       template: "%s | emje.vercel.app",
+//     },
+//     description: "A Product Designer and Coding Enthusiast with 7+ years of experience",
+//     openGraph: {
+//       title: "emje.vercel.app",
+//       description:
+//         "A Product Designer and Coding Enthusiast with 7+ years of experience",
+//       url: "https://emje.vercel.app/",
+//       siteName: "emje.vercel.app",
+//       images: [
+//         {
+//           url: "https://emje.vercel.app/thumbnail.png",
+//           width: 1920,
+//           height: 1080,
+//         },
+//       ],
+//       locale: "en-US",
+//       type: "website",
+//     },
+//     robots: {
+//       index: true,
+//       follow: true,
+//       googleBot: {
+//         index: true,
+//         follow: true,
+//         "max-video-preview": -1,
+//         "max-image-preview": "large",
+//         "max-snippet": -1,
+//       },
+//     },
+//     twitter: {
+//       title: "neveraemje",
+//       card: "summary_large_image",
+//     },
+//     icons: {
+//       shortcut: "/mj.png",
+//     },
+//   };
   
 
 
 const guestData = async() => {
     try {
 
-        const res = await fetch('https://emje.vercel.app/api/user', {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/user`, {
             cache: "no-cache"
         })
 
@@ -147,4 +147,4 @@ export default async function GuestBook() {
     )
 }
 
-export const runtime = 'edge'
+// export const runtime = 'edge'
