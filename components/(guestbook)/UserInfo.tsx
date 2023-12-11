@@ -168,3 +168,4 @@ export default function UserInfo() {
 }
 
 
+export const runtime = 'edge'

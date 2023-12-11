@@ -146,3 +146,5 @@ export default async function GuestBook() {
         </div>
     )
 }
+
+export const runtime = 'edge'
