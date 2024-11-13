@@ -50,13 +50,14 @@ function Form() {
       
           // console.log(res); // Log the response for debugging
       
-          // if (res.ok) {
-          //   setMsg("")
-          //   router.push('/guestbook');
-          //   window.location.reload();
-          // } else {
-          //   throw new Error('Failed to sign in the guestbook');
-          // }
+          if (res.ok) {
+            setName("")
+            setMsg("")
+            router.push('/book');
+            window.location.reload();
+          } else {
+            throw new Error('Failed to sign in the guestbook');
+          }
         } catch (error) {
           console.error(error);
         }
