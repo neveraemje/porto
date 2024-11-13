@@ -3,6 +3,7 @@
 import UserInfo from "@/components/(guestbook)/UserInfo";
 import { NextAuthProvider } from "../provider";
 import { Metadata } from "next"
+import { Suspense } from "react";
 
 
 export const metadata: Metadata = {
@@ -46,8 +47,6 @@ export const metadata: Metadata = {
       shortcut: "/mj.png",
     },
   };
-  
-
 
 const guestData = async() => {
     try {
@@ -89,14 +88,11 @@ export default async function GuestBook() {
         <div className="prose dark:prose-invert max-w-3xl sm:mt-14 mt-10 mx-6 sm:mx-6">
         <NextAuthProvider>
         <UserInfo/>
+        <Suspense>
         <section className=" mx-0 sm:mx-10 mt-10">
             <div className="flex flex-col md:flex-row gap-1 md:gap-12 w-full">
 
             <div className="flex flex-col gap-1 w-full mt-0">
-          
-
-   
-
 
   <ul className=" space-y-4 mt-0 pl-0">
   
@@ -126,8 +122,6 @@ export default async function GuestBook() {
           <div className="w-full flex-none text-base font-[450] text-zinc-700 dark:text-zinc-200 pl-0 pt-0 mt-0">
           {tamu.msg}
           </div>
-
-          
         </div>
       </li>
 ))}
@@ -135,21 +129,22 @@ export default async function GuestBook() {
   </ul>
 </div>
 </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
+        </section>
+        </Suspense>
         </NextAuthProvider>
         </div>
     )
 }
+
+
+
+export const getProps = async () => {
+  const data = await guestData();
+
+  return {
+    data,
+  };
+};
+
 
 export const runtime = 'edge'

@@ -50,10 +50,10 @@ const page = () => {
   ];
   const contribution = [
     {
-      object: "Industry Relationship Coordinator IxDA Chapter Malang Jan 2019 - Present",
+      object: "Actively in the Interaction Design Association community (IxDA) chapter Malang",
     },
     {
-      object: "Industry Relationship Coordinator IxDA Chapter Malang Jan 2019 - Present",
+      object: "As a Reviewer in Portfolio Review IxDA Chapter Malang, 2019",
     },
     {
       object: "As a keynote speaker cangkrUXan #5 IxDA Malang in DiLo Malang, Jun 25, 2019.",
@@ -183,14 +183,14 @@ const page = () => {
           Download my resume <HiDownload />
         </Button>
       </div>
-        
+        A seasoned Product Designer with over 7 years of experience, specializing in creating robust user-centered designs and comprehensive design systems for businesses.
       </div> */}
 
     <section className="mx-0 sm:mx-10">
     <div className=" flex flex-col">
-        <div className=" flex flex-col justify-center items-center gap-2 text-center">
+        <div className=" flex flex-col justify-center  gap-2 text-left">
           <h1 className=" font-semibold bg-gradient-to-b from-zinc-700 to-zinc-500 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent text-3xl lg:text-3xl mb-0">
-          A seasoned Product Designer with over 7 years of experience, specializing in creating robust user-centered designs and comprehensive design systems for businesses.
+          A Product Designer with 7+ years of experience, focused on creating user-centered designs and design systems for businesses.
           </h1>
           <div className="columns-2 sm:columns-3 gap-4 mt-6 z-20">
             <div className=" h-40 w-full relative hidden sm:block mb-4">
@@ -231,65 +231,48 @@ const page = () => {
             </div>
           </div>
 
-          <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700 text-justify">
+          <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700  text-justify">
             Hi, I am Emje, a product designer from Indonesia. I graduated in
             Informatics Engineering, which laid the foundation for my skills in
             blending design, tech, human aspects, and business strategy. Over
             the past 7+ years, I have worked in diverse roles across software
             houses, AI companies, on-demand services, SaaS, B2B, and B2C.
           </p>
-          <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700 text-justify">
+          <p className=" mt-6 text-base dark:text-zinc-300 text-zinc-700  text-justify">
             I kicked off my career as a graphic designer in college and later
-            transitioned to becoming a UI/UX Designer at
-            <span className="not-prose inline-flex mx-2">
-              <a
+            transitioned to becoming a UI/UX Designer at <a
                 href="https://sisi.id/"
                 target="_blank"
                 className="underline decoration-pink-500 font-semibold decoration-2"
-              >
-                SISI
-              </a>
-            </span>
-            and
-            <span className="not-prose inline-flex mx-2">
-              <a
+              >SISI 
+              </a> and <a
                 href="https://www.dot.co.id/"
                 target="_blank"
                 className="underline decoration-orange-500 font-semibold decoration-2"
               >
                 DOT Indonesia
-              </a>
-            </span>
-            until 2019. After that, I joined
-            <span className="not-prose inline-flex mx-2">
-              <a
+              </a> until 2019. After that, I joined <a
                 href="http://kata.ai/"
                 target="_blank"
                 className="underline decoration-blue-400 font-semibold decoration-2"
               >
                 Kata.ai
-              </a>
-            </span>
-            , an AI and SaaS company, contributing to chatbot platform features,
+              </a>, an AI and SaaS company, contributing to chatbot platform features,
             rebranding, and creating the Aksara Design System.
           </p>
-          <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700 text-justify">
-            Currently, I am a Product Designer at
-            <span className="not-prose inline-flex mx-2">
-              <a
+          <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700  text-justify">
+            Currently, I am a Product Designer at <a
                 href="https://www.gojek.com/en-id/"
                 target="_blank"
                 className="underline decoration-green-600 font-semibold decoration-2"
               >
                 Gojek
-              </a>
-            </span>
-            , involved in evolving the Asphalt Design System, standardizing 18+
+              </a>, involved in evolving the Asphalt Design System, standardizing 18+
             products, and enabling designers to leverage our system. We have also
             built an in-house Figma plugin and a central hub for design system
             documentation, saving considerable time and costs annually.
           </p>
-          <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700 text-justify">
+          <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700  text-justify">
             Through my journey, I see design as a constant learning process,
             like a traveler exploring an unknown path. It is a bit like a
             challenging hike, where patience and resilience are key to reaching

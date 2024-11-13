@@ -5,7 +5,7 @@ import "./globals.css"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Analytics } from "@/components/analytics"
-
+import { SlidingTabBar } from "@/components/Slider"
 import Footer from "@/components/Footer"
 import NavBar from "@/components/navbar";
 import { Metadata } from "next"
@@ -69,7 +69,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`antialiased min-h-scree bg-white dark:bg-zinc-900 text-gray-800 dark:text-slate-50 ${inter.className}`}
+        className={`antialiased min-h-scree bg-white dark:bg-zinc-800 text-gray-800 dark:text-slate-50 ${inter.className}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="max-w-screen mx-auto">
@@ -77,10 +77,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <header className="sticky top-0  backdrop-blur-xl py-2 z-50">
 
              <NavBar/>
+             {/* <SlidingTabBar/> */}
            
             </header>
             
             <main className="max-w-3xl mx-auto">{children}</main>
+            
             <Footer/>
           </div>
           <Analytics />

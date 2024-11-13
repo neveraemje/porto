@@ -1,3 +1,328 @@
+
+
+ 
+
+
+export const metadata: Metadata = {
+    title: {
+      default: "emje.vercel.app",
+      template: "%s | emje.vercel.app",
+    },
+    description: "A Product Designer and Coding Enthusiast with 7+ years of experience",
+    openGraph: {
+      title: "emje.vercel.app",
+      description:
+        "A Product Designer and Coding Enthusiast with 7+ years of experience",
+      url: "https://emje.vercel.app/",
+      siteName: "emje.vercel.app",
+      images: [
+        {
+          url: "https://emje.vercel.app/thumbnail.png",
+          width: 1920,
+          height: 1080,
+        },
+      ],
+      locale: "en-US",
+      type: "website",
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    twitter: {
+      title: "neveraemje",
+      card: "summary_large_image",
+    },
+    icons: {
+      shortcut: "/mj.png",
+    },
+  };
+
+ 
+
+// export const getProps = async () => {
+//   const data = await guestData();
+
+//   return {
+//     data,
+//   };
+// };
+
+ 
+  interface Props  {
+    name: string;
+    photo: string;
+    msg: string;
+    _id: string;
+    date?: string;
+    timestamp: number;
+  };
+
+
+    const data = await guestData()
+    if (!data) {
+      return <div>Loading getting the data...</div>;
+    }
+    
+ 
+        <section className=" mx-0 sm:mx-10 mt-10">
+            <div className="flex flex-col md:flex-row gap-1 md:gap-12 w-full">
+
+            <div className="flex flex-col gap-1 w-full mt-0">
+
+  <ul className=" space-y-4 mt-0 pl-0">
+  
+  {data && data.guest && data.guest.slice().reverse().map((tamu: Props) => (
+
+      <li className="flex gap-4 " key={tamu._id}>
+        <div className="relative mt-1 flex h-9 w-9 flex-none items-center justify-center rounded-full">
+          <img
+            alt=""
+            loading="lazy"
+            width="32"
+            height="32"
+            decoding="async"
+            data-nimg="1"
+            className=" h-8 w-8 rounded-full"
+            src={tamu.photo}
+          />
+        </div>
+        <div className="flex flex-auto flex-wrap gap-x-2 mt-0 mb-0">
+        <div className="justify-between items-center w-full sm:flex">
+            <div className=" text-sm text-teal-600 dark:text-teal-500 font-medium pl-0 pt-0 mt-0">
+              {tamu.name}
+            </div>
+            
+          </div>
+
+          <div className="w-full flex-none text-base font-[450] text-zinc-700 dark:text-zinc-200 pl-0 pt-0 mt-0">
+          {tamu.msg}
+          </div>
+        </div>
+      </li>
+))}
+
+  </ul>
+</div>
+</div>
+</section>
+ 
+entries.map((entry) => (
+    <div key={entry.id} className="flex flex-col space-y-1 mb-4">
+      <div className="w-full text-sm break-words">
+        <span className="text-neutral-600 dark:text-neutral-400 mr-1">
+          {entry.created_by}:
+        </span>
+        {entry.body}
+      </div>
+    </div>
+  ));
+ 
+
+
+export default GuestEntries
+ 
+ => 
+ 
+ = async()
+ 
+import React from 'react'
+
+const getGuestbookEntries = as() => {
+  return (
+    <div>GuestEntries</div>
+  )
+}
+ 
+slice().reverse()
+ 
+"use client"
+import React, { useEffect, useState } from 'react';
+
+
+ 
+ </NextAuthProvider>
+        </div>
+ 
+ <div className="prose dark:prose-invert max-w-3xl sm:mt-14 mt-10 mx-6 sm:mx-6">
+ 
+    <NextAuthProvider>
+        <UserInfo/>
+ 
+export default async function GuestList() => {
+
+      interface Props  {
+    name: string;
+    photo: string;
+    msg: string;
+    _id: string;
+    date?: string;
+    timestamp: number;
+  };
+
+
+    const data = await guestData()
+    if (!data) {
+      return <div>Loading getting the data...</div>;
+    }
+    
+
+  return (
+    <ul className="space-y-4 mt-0 pl-0">
+      {data.map((tamu: GuestProps) => (
+        <li className="flex gap-4" key={tamu._id}>
+          <div className="relative mt-1 flex h-9 w-9 flex-none items-center justify-center rounded-full">
+            <img
+              alt=""
+              loading="lazy"
+              width="32"
+              height="32"
+              decoding="async"
+              data-nimg="1"
+              className="h-8 w-8 rounded-full"
+              src={tamu.photo}
+            />
+          </div>
+          <div className="flex flex-auto flex-wrap gap-x-2 mt-0 mb-0">
+            <div className="justify-between items-center w-full sm:flex">
+              <div className="text-sm text-teal-600 dark:text-teal-500 font-medium pl-0 pt-0 mt-0">
+                {tamu.name}
+              </div>
+            </div>
+            <div className="w-full flex-none text-base font-[450] text-zinc-700 dark:text-zinc-200 pl-0 pt-0 mt-0">
+              {tamu.msg}
+            </div>
+          </div>
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+
+ 
+export default GuestList;
+ 
+interface GuestProps {
+  name: string;
+  photo: string;
+  msg: string;
+  _id: string;
+  date?: string;
+  timestamp: number;
+}
+ 
+  const [data, setData] = useState<GuestProps[]>([]);
+
+ 
+ 
+ useEffect(() => {
+    const fetchGuestData = async () => {
+      try {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/user`, {
+          cache: 'no-cache',
+        });
+
+        if (!res.ok) {
+          throw new Error('Failed to fetch guest');
+        }
+
+        const guestData = await res.json();
+        setData(guestData?.guest?.slice().reverse() || []);
+      } catch (error) {
+        console.log('Error fetching guest data', error);
+      }
+    };
+
+    fetchGuestData();
+  }, []);
+ 
+// components/GuestList.tsx
+ 
+          
+
+   
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+export const getProps = async () => {
+  const data = await guestData();
+
+  return {
+    data,
+  };
+};
+
+ 
+   {
+      object: "Industry Relationship Coordinator IxDA Chapter Malang Jan 2019 - Present",
+    },
+ 
+hyphenate
+ 
+ break-all
+ 
+indent-8  text-justify whitespace-pre-wrap break-all
+ 
+ hyphens-auto
+ 
+ hyphens-auto
+ 
+justify
+ 
+  break-all
+ 
+hyphens-auto
+ 
+break-all
+ 
+            </span>
+ 
+<span className="not-prose inline-flex mx-2">
+ 
+            </span>
+ 
+            <span className="not-prose inline-flex mx-2">
+ 
+            </span>
+ 
+            <span className="not-prose inline-flex mx-2">
+ 
+   </span>
+ 
+            <span className="not-prose ">
+ 
+mx-2
+ 
+ break-normal hyphens-auto
+ 
+whitespace-pre-wrap break-all
+ 
+text-justify
+ 
+before
+ 
+break-all
+ 
+ text-justify flex-wrap
+ 
 <div className=" flex flex-col justify-center items-center gap-2 text-center">
                 <h1 className=" bg-gradient-to-b from-zinc-700 to-zinc-500 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent text-3xl lg:text-4xl mb-0"> Case studies</h1>
             </div>

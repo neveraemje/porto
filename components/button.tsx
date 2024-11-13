@@ -5,6 +5,8 @@ import { ReactNode } from 'react';
 interface ButtonProps {
   href: string;
   children: ReactNode;
+  target?: string;  // Optional target property
+  rel?: string;     // Optional rel property
 }
 
 const Button = ({ href, children }: ButtonProps) => {
@@ -25,8 +27,8 @@ const Button = ({ href, children }: ButtonProps) => {
         hover:bg-gradient-to-b hover:from-zinc-800 hover:to-zinc-800
         text-white 
         shadow-lg 
-         shadow-zinc-500
-          dark:shadow-zinc-700
+         shadow-zinc-300
+          dark:shadow-none
          shad
         active:border-zinc-950 
         active:border-b-zinc-800
@@ -54,4 +56,6 @@ const Button = ({ href, children }: ButtonProps) => {
   );
 };
 
-export default Button;
+
+
+export default Button

@@ -1,0 +1,234 @@
+---
+title: A Universal Color Bank for Gojek
+description: Design Lint is a Figma plugin tool that aids designers in identifying and resolving design issues, ensuring alignment with the Asphalt Aloha Design System, aiming to save time and enhance collaboration with engineers.
+impact: Design Lint, a tool aligned with Asphalt Aloha Design System, reduced Gojek's work by 60%, increased issue-spotting by 26%, saving 4,259 hours and $93,709 annually for a significant efficiency and cost win.
+date: "2024"
+project: Figma plugin
+image: /lint/lint-cover.png
+company_profile: /company/gojek.png
+company_name: Gojek
+selected: true
+---
+
+
+
+
+<div>
+<p className="mb-0 font-medium text-lg dark:text-zinc-300">Impact</p>
+</div>
+##### Design Lint cut Gojek's work by 60%, and boosted issue-spotting by 26%, saving 4,259 hours and $93,709 annually. It's a big efficiency and cost win.
+
+---
+
+## Background
+To enhance the Asphalt design system foundation, we aim to establish a robust structure that offers flexibility for color variations, reduces costs and time when adding new colors, supports festive events, and ensures resilience. This will create a single source of color bank for the product, web, and illustration & creative teams.
+
+---
+
+## Problem identified
+
+- **Limited Creative Flexibility:** Restrictive token colors make it hard for designers to create unique color schemes. For example, GoFood's Ramadan campaign faced delays due to these limits, impacting campaign success and brand differentiation.
+- **Inconsistent Brand Experience:** A lack of unified colors across mobile, web, and illustrations leads to a disconnected and inconsistent look, weakening brand recognition and customer trust.
+- **High Costs and Delays in Adding Colors:** Without a base set of colors, adding new token colors is costly and time-consuming. Each addition requires multiple themes, causing inefficiencies and slowing down the design process.
+- **Non-Scalable Use of Hex Values:** Many products use direct hex values instead of tokens, which limits scalability, hinders mode and theming support, and poses future maintenance challenges
+
+
+---
+## Why do we need it?
+
+#### Benefits to Business
+
+- **Stronger Brand Recognition:** A consistent color system makes Gojek more recognizable, building customer trust and loyalty.
+- **Reduced Costs and Faster Delivery:** Standardizing colors cuts down design time and costs, speeding up project delivery.
+- **Higher ROI on Design:** With an efficient color process, design resources go further, boosting return on investment across marketing and design efforts.
+
+#### Benefits to Designers
+
+- Establishing a set of these token colors will create a **centralized Gojek color bank and picker for teams across product, mobile, web, illustration, and creative.** This will streamline the process of exploring and adding new colors, reduce time and costs, and enhance brand awareness.
+
+---
+
+
+## Hypothesis
+>If we establish a universal color bank for the team, then we will have a consistent source of color truth that accelerates exploration, reduces the costs of experimenting with new colors, and enhances brand consistency and awareness for Gojek.
+
+We believe that consistency across Gojek products is one of the keys to providing a great user experience. We can't ignore that the problem and development process is fast and as we all know, it's almost impractical for our designers to manually check every UI aspect of their designs every time. But, Gojek has a holly mantra to solve every problem with “Pasti Ada Jalan” or There is always a way.
+
+---
+
+## Propose solution
+
+<div className="border-l-4 border-zinc-300 mr-4">
+<div className="pl-4 mb-4 font-semibold text-xl text-zinc-500 dark:text-zinc-300">"A Universal Color Bank for Gojek"</div>
+</div>
+
+
+<div className="items-center border-l-4 border-zinc-300 mr-4">
+  <div className="pl-4 mb-4 font-semibold text-xl text-zinc-500 dark:text-zinc-300">
+    “A Universal Color Bank for Gojek”
+  </div>
+</div>
+
+
+
+<div className="mb-4 border-l-4 border-zinc-500 pl-4 text-zinc-500 dark:text-zinc-300 font-semibold text-xl italic">
+  “A Universal Color Bank for Gojek”
+</div>
+
+
+
+Traditional design tools provide a vast range of colors, often with millions of shades, making color selection subjective and prone to accessibility issues. To solve this, we propose a curated, tokenized library of “primitive colors” created using the OKLCH color model. This approach offers an accessible, standardized palette that simplifies shade selection and enhances design consistency across all Gojek platforms.
+
+### What is OKLCH color model
+
+OKLCH is a color model based on the OKLab color space and represents colors with a focus on perceptual uniformity. It uses three parameters:
+![Untitled](/oklch/oklch.png)
+![Untitled](/oklch/oklch-code.png)
+
+- **L (luminance):** how light or dark a color is, with L=0 being black and L=1 being white.
+- **C (chroma):** color intensity.
+- **H (hue):** color type.
+
+Example: oklch(0.8 0.15 145deg) for light green.
+
+
+### Why is OKLCH color model
+
+OKLCH enhances design by expanding the color gamut, simplifying brightness and saturation adjustments, and ensuring smooth gradients. It improves accessibility with easy contrast adjustments, high-contrast palettes, future-proof designs for modern displays, and sufficient contrast for low-vision users.
+![OKLCH](/oklch/oklch.gif)
+
+#### OKLCH vs RGB
+<img className="mb-0" src="/oklch/rgb.png" alt="Untitled"/>
+
+<div className="overflow-x-auto mt-0">
+      <table className="min-w-full border-gray-200 dark:border-zinc-700 rounded-lg text-sm text-left text-gray-700 dark:text-zinc-200">
+        <thead>
+          <tr>
+            <th className="px-4 py-3 font-semibold border-b">Feature</th>
+            <th className="px-4 py-3 font-semibold border-b">OKLCH</th>
+            <th className="px-4 py-3 font-semibold border-b">RGB</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="px-4 py-2 border-b">Uniformity</td>
+            <td className="px-4 py-2 border-b">Perceptually uniform; changes are predictable</td>
+            <td className="px-4 py-2 border-b">Not uniform; changes can be unpredictable</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border-b">Brightness Control</td>
+            <td className="px-4 py-2 border-b">Adjusts luminance directly without affecting hue</td>
+            <td className="px-4 py-2 border-b">Hard to control brightness independently</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border-b">Consistency</td>
+            <td className="px-4 py-2 border-b">Maintains hue when adjusting brightness or saturation</td>
+            <td className="px-4 py-2 border-b">Adjustments often shift color unintentionally</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border-b">Accessibility</td>
+            <td className="px-4 py-2 border-b">Easy to create accessible contrasts</td>
+            <td className="px-4 py-2 border-b">Difficult to ensure accessible contrast</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border-b">Ease of Use</td>
+            <td className="px-4 py-2 border-b">Designed for modern, precise color adjustments</td>
+            <td className="px-4 py-2 border-b">Simple, but not optimized for design nuances</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border-b">Best for</td>
+            <td className="px-4 py-2 border-b">Accessible, consistent UI design and branding</td>
+            <td className="px-4 py-2 border-b">Standard screen display, basic color needs</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+#### OKLCH vs HSL
+<img className="mb-0" src="/oklch/rgb.png" alt="Untitled"/>
+
+<div className="overflow-x-auto mt-0">
+      <table className="min-w-full border-gray-200 dark:border-zinc-700 rounded-lg text-sm text-left text-gray-700 dark:text-zinc-200">
+        <thead>
+          <tr>
+            <th className="px-4 py-3 font-semibold border-b">Feature</th>
+            <th className="px-4 py-3 font-semibold border-b">OKLCH</th>
+            <th className="px-4 py-3 font-semibold border-b">HSL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="px-4 py-2 border-b">Uniformity</td>
+            <td className="px-4 py-2 border-b">Perceptually uniform; changes are predictable</td>
+            <td className="px-4 py-2 border-b">Not fully uniform, so some color transitions can appear inconsistent</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border-b">Brightness Control</td>
+            <td className="px-4 py-2 border-b">Adjusts luminance directly without affecting hue	</td>
+            <td className="px-4 py-2 border-b">Lightness (L) is not perceptually linear, making it less precise for brightness adjustments</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border-b">Consistency</td>
+            <td className="px-4 py-2 border-b">Maintains hue when adjusting brightness or saturation</td>
+            <td className="px-4 py-2 border-b">Color consistency can vary, especially with high saturation and lightness values</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border-b">Accessibility</td>
+            <td className="px-4 py-2 border-b">Easy to create accessible contrasts</td>
+            <td className="px-4 py-2 border-b">May lack clarity and consistency for accessibility, especially with subtle hues</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border-b">Ease of Use</td>
+            <td className="px-4 py-2 border-b">Designed for modern, precise color adjustments</td>
+            <td className="px-4 py-2 border-b">Intuitive and straightforward, widely supported in design tools and CSS</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 border-b">Best for</td>
+            <td className="px-4 py-2 border-b">Accessible, consistent UI design and branding</td>
+            <td className="px-4 py-2 border-b">General design, web design, quick color adjustments without precise control</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+### Constraint of OKLCH color model
+The OKLCH color model is primarily suited for web and desktop applications, with limited support in Android, iOS, and Figma. To address this, we are using the OKLCH color model as a method to establish a color palette by building an OKLCH generator that supports palettes with shades, charts, and accessibility data (WCAG and APCA). However, we will use hexadecimal values in Figma.
+
+---
+
+## Final visual design
+
+![Untitled](/lint/img1.png)
+![Untitled](/lint/img2.png)
+![Untitled](/lint/img3.png)
+
+---
+
+## Statement to validate / Metrics
+
+#### North star metrics
+
+- Increase Aloha design system adoption to 80% or more.
+- Time and cost saving to identify the issues
+- Time and cost savings to fixing the issues
+- Increase accuracy in issue identification
+
+---
+
+## My contributions
+
+- Establish the design documentation
+- Define milestones and strategies
+- Facilitate focused group discussions and conduct usability testing
+- Measure the impact of metrics
+- Create the flow, information architecture, interface, and interactions
+- Collaborate with engineers to implement the design.
+
+---
+
+## Key learning
+
+- **User-Centric Insights:** Obtained valuable insights by directly addressing user pain points through close group discussions.
+- **Cost-Effective Prototyping:** Highlighted the importance of developing cost-effective solutions for direct user testing, ensuring the tool effectively addresses real user needs and challenges
