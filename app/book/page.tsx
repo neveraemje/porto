@@ -150,13 +150,13 @@ export default async function GuestBook() {
 
 
 
-export const getProps = async () => {
-  const data = await guestData();
+// export const getProps = async () => {
+//   const data = await guestData();
 
-  return {
-    data,
-  };
-};
+//   return {
+//     data,
+//   };
+// };
 
 
 export const runtime = 'edge'
