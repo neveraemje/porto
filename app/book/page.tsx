@@ -95,20 +95,20 @@ export default async function GuestBook() {
 
             <div className="flex flex-col gap-1 w-full mt-0">
 
-  <ul className=" space-y-4 mt-0 pl-0">
+  {/* <ul className=" space-y-4 mt-0 pl-0">
   
   {data && data.guest && data.guest.slice().reverse().map((tamu: Props) => (
 
       <li className="flex gap-4 " key={tamu._id}>
         <Avatar>
-  {/* <AvatarImage src={tamu.photo} /> */}
+  
   <AvatarFallback>
   {tamu.name
         .split(" ") // Split the name into parts (first name, last name, etc.)
         .map((word) => word[0]) // Take the first letter of each part
         .slice(0, 2) // Get only the first two letters
         .join("") // Join them back together to form the initials
-        .toUpperCase()} {/* Convert the initials to uppercase */}
+        .toUpperCase()} 
   </AvatarFallback>
 </Avatar>
       
@@ -127,7 +127,37 @@ export default async function GuestBook() {
       </li>
 ))}
 
-  </ul>
+  </ul> */}
+
+<ul className="space-y-4 mt-0 pl-0">
+  {data && data.guest && data.guest.slice().reverse().map((tamu: Props) => (
+    <li className="flex gap-4 items-start" key={tamu._id}>
+      <Avatar>
+        <AvatarFallback>
+          {tamu.name
+            .split(" ")
+            .map((word) => word[0])
+            .slice(0, 2)
+            .join("")
+            .toUpperCase()}
+        </AvatarFallback>
+      </Avatar>
+
+      <div className="flex flex-col flex-auto gap-2">
+        <div className="text-sm text-teal-600 dark:text-teal-500 font-medium">
+          {tamu.name}
+        </div>
+
+        {/* Apply word and character wrapping */}
+        <div className="text-base font-[450] text-zinc-700 dark:text-zinc-200 break-all break-words whitespace-normal">
+          {tamu.msg}
+        </div>
+      </div>
+    </li>
+  ))}
+</ul>
+
+  
 </div>
 </div>
         </section>

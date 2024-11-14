@@ -26,7 +26,7 @@ const NavBar = () => {
     },
     {
       title: "Guestbook",
-      path: "/guestbook",
+      path: "/book",
     },
   ];
 

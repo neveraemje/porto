@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { HiDownload } from "react-icons/hi";
-import Button from "@/components/button";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 import nike from "public/profile/nike.png";
@@ -286,9 +286,21 @@ const page = () => {
 
     <section className="mx-0 sm:mx-10 mt-10">
         <div className="flex flex-col justify-center items-center">
-        <Button href="https://www.dropbox.com/scl/fi/u3ojh09hdqneidiwj0gr6/MJ-Arifin-Resume.pdf?rlkey=yp3zv4iuhruo5usygbdavi4wc&dl=0">
+        {/* <Button href="https://www.dropbox.com/scl/fi/u3ojh09hdqneidiwj0gr6/MJ-Arifin-Resume.pdf?rlkey=yp3zv4iuhruo5usygbdavi4wc&dl=0">
           Download my resume <HiDownload />
-        </Button>
+        </Button> */}
+        <Button asChild>
+  <Link 
+    href="https://www.dropbox.com/scl/fi/u3ojh09hdqneidiwj0gr6/MJ-Arifin-Resume.pdf?rlkey=yp3zv4iuhruo5usygbdavi4wc&e=1&dl=0" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="no-underline">
+    Download my resume
+    <HiDownload />
+
+  </Link>
+</Button>
+
         </div>
 
       </section>
