@@ -111,18 +111,7 @@ export default async function GuestBook() {
         .toUpperCase()} {/* Convert the initials to uppercase */}
   </AvatarFallback>
 </Avatar>
-        {/* <div className="relative mt-1 flex h-9 w-9 flex-none items-center justify-center rounded-full">
-          <img
-            alt=""
-            loading="lazy"
-            width="32"
-            height="32"
-            decoding="async"
-            data-nimg="1"
-            className=" h-8 w-8 rounded-full"
-            src={tamu.photo}
-          />
-        </div> */}
+      
         <div className="flex flex-auto flex-wrap gap-x-2 mt-0 mb-0">
         <div className="justify-between items-center w-full sm:flex">
             <div className=" text-sm text-teal-600 dark:text-teal-500 font-medium pl-0 pt-0 mt-0">

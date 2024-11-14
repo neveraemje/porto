@@ -4,9 +4,9 @@ import Image from "next/image";
 import { HiArrowRight } from "react-icons/hi";
 import { Case } from "@/components/case";
 import Company from "@/components/company";
-import Button from "@/components/button";
+// import Button from "@/components/button";
 import ButtonWhite from "@/components/buttonwhite";
-
+import { Button } from "@/components/ui/button"
 
 export default function Home() {
   
@@ -38,15 +38,34 @@ Currently shaping experiences at <span className="not-prose inline-flex mx-1">
       
       </h5>
 
-        <div className="">
-        <Button 
+        <div className="flex space-x-2">
+        {/* <Button 
   href="https://www.dropbox.com/scl/fi/u3ojh09hdqneidiwj0gr6/MJ-Arifin-Resume.pdf?rlkey=yp3zv4iuhruo5usygbdavi4wc&e=1&dl=0" 
   target="_blank" 
   
 >
   Resume
 </Button>
-    <ButtonWhite  href="/about">About me</ButtonWhite>
+<Button href="https://www.dropbox.com/scl/fi/u3ojh09hdqneidiwj0gr6/MJ-Arifin-Resume.pdf?rlkey=yp3zv4iuhruo5usygbdavi4wc&e=1&dl=0">Resume</Button>
+<Button href="/about">About me</Button> */}
+
+
+<Button asChild>
+  <Link 
+    href="https://www.dropbox.com/scl/fi/u3ojh09hdqneidiwj0gr6/MJ-Arifin-Resume.pdf?rlkey=yp3zv4iuhruo5usygbdavi4wc&e=1&dl=0" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="no-underline">
+    Resume
+  </Link>
+</Button>
+
+<Button variant="secondary" asChild>
+  <Link href="/about" className="no-underline">
+    About me
+  </Link>
+</Button>
+    {/* <ButtonWhite  href="/about">About me</ButtonWhite> */}
    
         </div>
    
