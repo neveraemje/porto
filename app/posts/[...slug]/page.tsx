@@ -62,7 +62,7 @@ export default async function PostPage({ params }: PostProps) {
 
   return (
     <>
-      <PostProgress post={post} />
+      {/* <PostProgress post={post} /> */}
       <div className="prose dark:prose-invert max-w-3xl mx-auto">
         <div className=" mt-10">
           <Link href="/case" className=" text-teal-600 dark:text-teal-500 hover:underline flex items-center gap-1 no-underline"><HiChevronLeft /> Back </Link></div>
