@@ -8,6 +8,45 @@
 @tailwind utilities;
 
 
+  .wcag-title{
+    @apply text-base font-semibold mb-2 text-zinc-800 dark:text-zinc-200;
+  }
+
+  .selected-box{
+    @apply w-4 h-4 flex items-center justify-center bg-black text-white font-semibold text-xs rounded-full
+  }
+
+  .wcag-color {
+    @apply text-sm font-medium text-zinc-600 dark:text-zinc-300
+  }
+
+  .wcag-result-box {
+    @apply inline-flex items-center max-w-max p-3 rounded-md
+  }
+
+  .wcag-container {
+    @apply mt-4 flex justify-between items-start gap-8 w-full p-6 border border-zinc-200 rounded-lg dark:border-zinc-700;
+  }
+
+  .wcag-sub-container {
+    @apply flex flex-col items-start w-1/2
+  }
+
+  .wcag-sub-sub-container {
+    @apply w-1/2
+  }
+
+  .wcag-badge {
+    @apply inline-flex items-center
+  }
+
+  .post-impact {
+    @apply bg-gradient-to-br from-pink-500 to-indigo-500 dark:from-pink-500 dark:to-indigo-500 bg-clip-text text-transparent text-2xl lg:text-3xl mb-0 font-semibold
+   }
+
+  .post-highlight {
+    @apply bg-gradient-to-b from-zinc-600 to-zinc-500 dark:from-zinc-400 dark:to-zinc-500 bg-clip-text text-transparent text-2xl  font-semibold mt-4 mb-4
+  }
 
   .prose-vercel :where(h1):not(:where([class~=not-prose] *)) {
     font-weight:600;
@@ -29,7 +68,7 @@
     @apply text-lg font-[400] leading-8 mt-3 mb-3 
   }
   .prose :where(ul):not(:where([class~="not-prose"], [class~="not-prose"] *)){
-    @apply mt-0 mb-0 text-lg font-[400] leading-8
+    @apply mt-0 mb-0 text-lg font-[400] leading-8 
   }
 
   .prose :where(hr):not(:where([class~="not-prose"], [class~="not-prose"] *)) {

@@ -8,6 +8,8 @@ import Company from "@/components/company";
 import ButtonWhite from "@/components/buttonwhite";
 import { Button } from "@/components/ui/button"
 
+
+
 export default function Home() {
   
 
@@ -86,6 +88,8 @@ Currently shaping experiences at <span className="not-prose inline-flex mx-1">
 
             </div>
       </section>
+
+
 
        </div>
 
