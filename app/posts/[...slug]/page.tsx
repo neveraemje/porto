@@ -11,7 +11,7 @@ import Footer from "@/components/Footer"
 import Button from "@/components/button"
 import PostProgress from "@/lib/postProgress"
 import { IBM_Plex_Sans } from "next/font/google"
-
+import DynamicProgressPreview from "@/lib/dynamic_progress"
 
 
 interface PostProps {
@@ -63,6 +63,7 @@ export default async function PostPage({ params }: PostProps) {
   return (
     <>
       {/* <PostProgress post={post} /> */}
+      <DynamicProgressPreview />
       <div className="prose dark:prose-invert max-w-3xl mx-auto">
         <div className=" mt-10">
           <Link href="/case" className=" text-teal-600 dark:text-teal-500 hover:underline flex items-center gap-1 no-underline"><HiChevronLeft /> Back </Link></div>
