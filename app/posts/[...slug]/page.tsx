@@ -9,7 +9,7 @@ import { HiChevronLeft } from "react-icons/hi"
 import { HiArrowNarrowLeft } from "react-icons/hi"
 import Footer from "@/components/Footer"
 import Button from "@/components/button"
-
+import PostProgress from "@/lib/postProgress"
 import { IBM_Plex_Sans } from "next/font/google"
 
 
@@ -62,9 +62,8 @@ export default async function PostPage({ params }: PostProps) {
 
   return (
     <>
-
-
-<div className="prose dark:prose-invert max-w-4xl mx-4">
+    <PostProgress post={post} />
+<div className="prose dark:prose-invert max-w-3xl mx-auto">
         <div className=" mt-10">
           <Link href="/case" className=" text-teal-600 dark:text-teal-500 hover:underline flex items-center gap-1 no-underline"><HiChevronLeft /> Back </Link></div>
 
@@ -140,11 +139,6 @@ export default async function PostPage({ params }: PostProps) {
 
       </div>
    
-
-
-
-
-
       
         <div className="flex flex-col md:flex-row gap-1 ">
 
@@ -156,9 +150,9 @@ export default async function PostPage({ params }: PostProps) {
 
         </div>
 
-
+        
         </div>
-
+        
     </>
   )
 }

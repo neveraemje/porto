@@ -294,8 +294,8 @@ const ColorPreview: React.FC<ColorPreviewProps> = ({ data }) => {
                   className={`cursor-pointer relative ${isSelected ? "rounded-md" : ""}`}
                   style={{
                     backgroundColor: color,
-                    width: "35px",
-                    height: "35px",
+                    width: "37px",
+                    height: "37px",
                     transform: isSelected ? "scale(1.2)" : "scale(1)",
                     zIndex: isSelected ? 10 : 1,
                     transition: "transform 0.2s ease, z-index 0.2s ease",

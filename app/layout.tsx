@@ -69,7 +69,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`antialiased min-h-scree bg-white dark:bg-zinc-800 text-gray-800 dark:text-slate-50 ${inter.className}`}
+        className={`antialiased min-h-screen bg-white dark:bg-zinc-800 text-gray-800 dark:text-slate-50 ${inter.className}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="max-w-screen mx-auto">
@@ -81,7 +81,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
            
             </header>
             
-            <main className="max-w-3xl mx-auto">{children}</main>
+            <main className=" w-full mx-auto">{children}</main>
             
             <Footer/>
           </div>
