@@ -6,7 +6,14 @@ import { HiArrowRight } from 'react-icons/hi';
 import { HiChevronRight } from 'react-icons/hi';
 
 export const Case = () => {
-    const selectedPosts = allPosts.filter((post) => post.selected === true);
+    //const selectedPosts = allPosts.filter((post) => post.selected === true);
+    const selectedPosts = allPosts
+    .filter((post) => post.selected === true) // Filter posts where 'selected' is true
+    .sort((a, b) => {
+      const dateA = new Date(a.date ?? 0); // Use 0 as fallback if 'date' is undefined
+      const dateB = new Date(b.date ?? 0);
+      return dateB.getTime() - dateA.getTime(); // Sort by newest first
+    });
   return (
 <div >
     
