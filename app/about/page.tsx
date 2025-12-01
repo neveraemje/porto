@@ -12,6 +12,7 @@ import mj from "public/profile/MJ.png";
 import talk from "public/profile/talk.png";
 import umay from "public/profile/umay.png";
 
+
 const page = () => {
   const experience = [
     {
@@ -201,8 +202,8 @@ const page = () => {
               </div>
               <div className="h-80 w-full relative hidden sm:block">
                 <img
-                  src="/profile/kopi.png"
-                  className="mt-0 object-cover h-full rounded-lg"
+                  src="/profile/v60.png"
+                  className="mt-0 object-fill w-full h-full rounded-lg"
                 />
               </div>
               <div className="h-80  w-full relative mb-4">
@@ -223,20 +224,30 @@ const page = () => {
                   className="mt-0 object-cover h-full rounded-lg"
                 />
               </div>
-              <div className="h-80  w-full relative">
-                <img
-                  src="/profile/talk.png"
+             {/* <div className="h-80 w-full relative">
+                <video
+                  src="/profile/sepeda.mp4"
                   className="mt-0 object-cover h-full rounded-lg"
+                  autoPlay
+                  muted
+                  playsInline
+                  loop
+                />
+            </div> */}
+            <div className="h-80 w-full relative hidden sm:block">
+                <video
+                  src="/profile/sepeda.mp4"
+                  className="mt-0 w-full h-full object-fill rounded-lg"
+                  autoPlay
+                  muted
+                  playsInline
+                  loop
                 />
               </div>
             </div>
 
             <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700  text-justify">
-              Hi, I am Emje, a product designer from Indonesia. I graduated in
-              Informatics Engineering, which laid the foundation for my skills in
-              blending design, tech, human aspects, and business strategy. Over
-              the past 7+ years, I have worked in diverse roles across software
-              houses, AI companies, on-demand services, SaaS, B2B, and B2C.
+              Hi, I am Emje, a product designer from Indonesia with 7+ years of experience. My Informatics Engineering background helps me blend design, tech, and business. I have worked across software houses, AI, on-demand platforms, SaaS, B2B, and B2C.
             </p>
             <p className=" mt-6 text-base dark:text-zinc-300 text-zinc-700  text-justify">
               I kicked off my career as a graphic designer in college and later
