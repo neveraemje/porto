@@ -4,13 +4,6 @@ import { HiDownload } from "react-icons/hi";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-import nike from "public/profile/nike.png";
-import gunung from "public/profile/gunung.png";
-import kitab from "public/profile/kitab.png";
-import kopi from "public/profile/kopi.png";
-import mj from "public/profile/MJ.png";
-import talk from "public/profile/talk.png";
-import umay from "public/profile/umay.png";
 
 
 const page = () => {
