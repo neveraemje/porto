@@ -145,7 +145,7 @@ const page = () => {
               </a>, an AI SaaS company, where I contributed to chatbot platform features, led rebranding efforts, and helped establish the Aksara Design System.
             </p>
             <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700 tracking-tight leading-relaxed">
-              Currently, I’m at <a
+              Currently, I am at <a
                 href="https://www.gojek.com/en-id/"
                 target="_blank"
                 className="no-underline  font-semibold text-green-600"
