@@ -33,7 +33,6 @@
     "eslint": "^8.57.0",
     "eslint-config-next": "^15.2.4",
     "framer-motion": "^12.38.0",
-    "hamburger-react": "^2.5.0",
     "lucide-react": "^0.456.0",
     "mongoose": "^8.0.3",
     "next": "^15.2.4",
