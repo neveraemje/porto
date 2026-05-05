@@ -28,7 +28,7 @@ export default function Home() {
             Product designer, system thinker, and occasional crafter.
           </h1>
           <h5 className="max-w-2xl text-zinc-600 dark:text-zinc-400 font-medium tracking-tight">
-            I am Emje, a senior product designer from Indonesia, turning complexity into scalable systems and consistent experiences. Currently shaping design systems at <a href="https://www.gojek.com/en-id/" target="_blank" className="underline decoration-green-600 font-semibold decoration-2 no-underline transition-colors">Gojek</a>
+            I am Emje, a senior product designer from Indonesia, turning complexity into scalable systems and consistent experiences. Currently shaping design systems at <a href="https://www.gojek.com/en-id/" target="_blank" className="underline decoration-green-600 font-semibold decoration-2 no-underline transition-colors">Gojek.</a>
           </h5>
           <Company />
         </div>
@@ -48,11 +48,11 @@ export default function Home() {
             See all <HiChevronRight className="text-xs" />
           </Link> */}
           <Button variant="secondary" asChild>
-            <Link href="/case-study" className=" flex items-center gap-1 no-underline pr-3">
-              See all <HiChevronRight /> 
+            <Link href="/case" className=" flex items-center gap-1 no-underline pr-3">
+              See all <HiChevronRight />
             </Link>
           </Button>
-          
+
         </div>
         <Case />
       </div>

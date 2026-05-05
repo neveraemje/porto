@@ -73,14 +73,14 @@ const NavBar = () => {
 
         </div>
 
-        <div className="relative z-[3] p-2 flex items-center justify-between w-full">
+        <div className="relative z-[3] p-1.5 sm:p-2 flex items-center justify-between w-full">
           {/* Group 1: Nav links */}
           <LayoutGroup id="navbar">
-            <ul className="flex items-center font-medium text-xs sm:text-sm text-black dark:text-white gap-1">
+            <ul className="flex items-center font-medium text-[11px] sm:text-sm text-black dark:text-white gap-0.5 sm:gap-1">
               {menu.map((item) => (
                 <li key={item.path}>
                   <Link href={item.path} className={`
-                    relative p-3 rounded-full transition-all duration-300
+                    relative px-2 py-2 sm:px-3 sm:py-3 rounded-full transition-all duration-300
                     ${pathname == item.path
                       ? "text-white"
                       : "text-black/80 dark:text-white hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5"}`}
@@ -100,13 +100,13 @@ const NavBar = () => {
           </LayoutGroup>
 
           {/* Spacer */}
-          <div className="w-20 shrink-0" />
+          <div className="hidden sm:block w-14 shrink-0" />
 
           {/* Group 2: Resume */}
           <Link
             href="https://www.dropbox.com/scl/fi/u3ojh09hdqneidiwj0gr6/MJ-Arifin-Resume.pdf?rlkey=yp3zv4iuhruo5usygbdavi4wc&e=1&dl=0"
             target="_blank"
-            className="relative p-3 rounded-full font-medium text-xs sm:text-sm text-black/80 dark:text-white transition-all duration-300 hover:text-black dark:hover:text-white"
+            className="relative px-3 py-2 sm:px-3 sm:py-3 rounded-full font-medium text-[11px] sm:text-sm text-black/80 dark:text-white transition-all duration-300 hover:text-black dark:hover:text-white"
           >
             <span className="absolute inset-0 rounded-full bg-black/[0.06] dark:bg-white/[0.1]" />
             <span className="relative z-[1]">Resume</span>

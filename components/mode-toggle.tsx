@@ -76,7 +76,9 @@ export function ModeToggle() {
     <motion.button
       whileHover="hover"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="group flex bg-black/5 dark:bg-white/5 rounded-full w-9 h-9 items-center justify-center text-zinc-600 dark:text-white hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-300 relative overflow-hidden"
+      className="group flex bg-black/5 dark:bg-white/5 rounded-full w-9 h-9 items-center justify-center text-zinc-600 
+      dark:text-white hover:text-teal-600 
+      dark:hover:text-yellow-400 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-300 relative overflow-hidden"
     >
       <span className="sr-only">Toggle mode</span>
       <AnimatePresence mode="wait" initial={false}>
