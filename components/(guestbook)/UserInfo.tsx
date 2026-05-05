@@ -83,7 +83,7 @@ function Form() {
         <button
         type="submit"
           className="
-          flex items-center justify-center absolute right-1 top-1 px-2 py-1 font-medium   rounded-xl mt-1.5 mr-1
+          flex items-center justify-center absolute right-1 top-1 px-2 py-1 font-medium   rounded-full mt-1.5 mr-1
            w-24 h-10
             border-b-4 
             border-l-2 

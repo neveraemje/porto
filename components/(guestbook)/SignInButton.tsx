@@ -6,7 +6,7 @@ export default function SignInButton() {
 return (
     <button onClick={ () => signIn('google')}
     className="
-     rounded-xl
+     rounded-full
      px-4 h-10
      flex items-center gap-2 border
    

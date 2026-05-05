@@ -48,8 +48,9 @@ function InputWithCharCount({ value, setValue, maxLength, placeholder }: {
               maxLength={maxLength}
               placeholder={placeholder}
               required
+              className="dark:bg-zinc-700/50"
           />
-          <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-sm text-zinc-400 dark:text-zinc-600 ">
+          <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-sm text-zinc-500 dark:text-zinc-400 ">
               {value.length}/{maxLength}
           </span>
       </div>
@@ -71,8 +72,9 @@ function TextareaWithCharCount({ value, setValue, maxLength, placeholder }: {
               maxLength={maxLength}
               placeholder={placeholder}
               required
+              className="dark:bg-zinc-700/50"
           />
-          <span className="absolute right-4 bottom-2 text-sm text-zinc-400 dark:text-zinc-600 ">
+          <span className="absolute right-4 bottom-2 text-sm text-zinc-500 dark:text-zinc-400 ">
               {value.length}/{maxLength}
           </span>
       </div>
@@ -380,10 +382,10 @@ export default function UserInfo() {
         <div className=" prose dark:prose-invert max-w-3xl sm:mt-14 mt-10"> 
        
     <div className=" mx-0 sm:mx-10">
-    <h1 className=" text-2xl font-semibold bg-gradient-to-b from-zinc-700 to-zinc-500 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent  mb-0">
-          Leave a message for my guestbook
+    <h1 className=" text-2xl font-semibold bg-gradient-to-b from-zinc-700 to-zinc-500 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent  mb-0 tracking-tight">
+          Leave a message for my guestbook.
        </h1> 
-        <p className="text-sm">If a traveler has the principle to take nothing but photos, leave nothing but footprints,  there is an exception:  <strong>Leave only your signature message.</strong></p>
+        <p className="text-sm tracking-tight">Take nothing but photos, leave nothing but footprints…<br/> except here — leave your signature message 😉</p>
       
 
             <Form/>

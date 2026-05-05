@@ -22,11 +22,11 @@ export const metadata: Metadata = {
     default: "emje.vercel.app",
     template: "%s | emje.vercel.app",
   },
-  description: "A Product Designer and Coding Enthusiast with 7+ years of experience",
+  description: "A Product Designer and Coding Enthusiast with 9+ years of experience",
   openGraph: {
     title: "emje.vercel.app",
     description:
-      "A Product Designer and Coding Enthusiast with 7+ years of experience",
+      "A Product Designer and Coding Enthusiast with 9+ years of experience",
     url: "https://emje.vercel.app/",
     siteName: "emje.vercel.app",
     images: [
@@ -67,29 +67,22 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
+        suppressHydrationWarning
         className={`antialiased min-h-screen bg-white dark:bg-zinc-800 text-gray-800 dark:text-slate-50 ${inter.className}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <NavBar />
           <div className="max-w-screen mx-auto">
-            
-            <header className="sticky top-0  backdrop-blur-xl py-2 z-50">
-
-             <NavBar/>
-             {/* <SlidingTabBar/> */}
-           
-            </header>
-            
-            <main className=" w-full mx-auto">{children}</main>
-            
-            <Footer/>
+            <main className="w-full mx-auto pb-28">{children}</main>
+            <Footer />
           </div>
           <Analytics />
         </ThemeProvider>
       </body>
 
-      
+
     </html>
   )
 }

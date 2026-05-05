@@ -1,101 +1,62 @@
-import { allPosts } from "@/.contentlayer/generated"
+import { posts } from "@/velite-data"
 import Link from "next/link"
 import Image from "next/image";
-import { HiArrowRight } from "react-icons/hi";
+import { HiArrowRight, HiChevronRight } from "react-icons/hi";
+import { FaTwitter, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Case } from "@/components/case";
 import Company from "@/components/company";
-// import Button from "@/components/button";
-import ButtonWhite from "@/components/buttonwhite";
-import { Button } from "@/components/ui/button"
-
+import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/mode-toggle";
 
 
 export default function Home() {
-
-
   return (
-    <div className="prose dark:prose-invert max-w-3xl sm:mt-14 mt-10 mx-6 sm:mx-auto" >
-
-      <section className=" flex flex-col items-center gap-8  mb-14 sm:mt-14 mt-10">
-
-        <Company />
-        <div className=" flex flex-col justify-center items-center gap-6 text-center">
-          <h1 className=" max-w-2xl bg-gradient-to-b from-zinc-700 to-zinc-500 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent text-3xl lg:text-5xl mb-0"> Product Designer & Coding Enthusiast</h1>
-          <h5 className=" max-w-2xl text-zinc-600 dark:text-zinc-400 font-medium lg:px-10 sm:px0">
-            {/* I am Emje, a product designer from Indonesia with seven years of design experience. Currently working as a Product Designer at the Gojek Design Team 🪄✨🏕️.
-       */}
-
-            I am Emje, a Senior Product Designer and coding enthusiast from Indonesia.
-
-            Currently shaping experiences at <span className="not-prose inline-flex mx-1">
-              <a
-                href="https://www.gojek.com/en-id/"
-                target="_blank"
-                className="underline decoration-green-600 font-semibold decoration-2"
-              >
-                Gojek
-              </a>
-            </span> as a Product Designer in the Design System team. 🪄✨🏕️☕
-
-
-          </h5>
-
-          <div className="flex space-x-2">
-            {/* <Button 
-  href="https://www.dropbox.com/scl/fi/u3ojh09hdqneidiwj0gr6/MJ-Arifin-Resume.pdf?rlkey=yp3zv4iuhruo5usygbdavi4wc&e=1&dl=0" 
-  target="_blank" 
-  
->
-  Resume
-</Button>
-<Button href="https://www.dropbox.com/scl/fi/u3ojh09hdqneidiwj0gr6/MJ-Arifin-Resume.pdf?rlkey=yp3zv4iuhruo5usygbdavi4wc&e=1&dl=0">Resume</Button>
-<Button href="/about">About me</Button> */}
-
-
-            <Button asChild>
-              <Link
-                href="https://www.dropbox.com/scl/fi/u3ojh09hdqneidiwj0gr6/MJ-Arifin-Resume.pdf?rlkey=yp3zv4iuhruo5usygbdavi4wc&e=1&dl=0"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="no-underline">
-                Resume
-              </Link>
-            </Button>
-
-            <Button variant="secondary" asChild>
-              <Link href="/about" className="no-underline">
-                About me
-              </Link>
-            </Button>
-            {/* <ButtonWhite  href="/about">About me</ButtonWhite> */}
-
+    <div className="prose dark:prose-invert max-w-3xl sm:mt-14 mt-10 mx-6 sm:mx-auto">
+      <section className="flex flex-col items-start gap-8 mb-14 sm:mt-14 mt-10">
+        <div className="flex flex-col justify-start items-start gap-6 text-left w-full">
+          <div className="flex justify-between items-center w-full">
+            <Image
+              src="/mj.png"
+              width={72}
+              height={72}
+              alt="emje"
+              className="rounded-full border border-neutral-200 dark:border-neutral-800 shadow-sm my-0"
+            />
+            <ModeToggle />
           </div>
-
-
-
-          {/* <Company/> */}
-
-        </div>
-
-      </section>
-
-      <hr />
-
-      <section className=" mx-0 sm:mx-10 mt-10">
-        <div className="flex flex-col md:flex-row gap-1 md:gap-12 w-full">
-
-          <Case />
-
+          <h1 className="max-w-2xl bg-gradient-to-b from-zinc-700 to-zinc-500 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent text-2xl lg:text-4xl mb-0 tracking-tight py-1 font-bold">
+            Product designer, system thinker, and occasional crafter.
+          </h1>
+          <h5 className="max-w-2xl text-zinc-600 dark:text-zinc-400 font-medium tracking-tight">
+            I am Emje, a senior product designer from Indonesia, turning complexity into scalable systems and consistent experiences. Currently shaping design systems at <a href="https://www.gojek.com/en-id/" target="_blank" className="underline decoration-green-600 font-semibold decoration-2 no-underline transition-colors">Gojek</a>
+          </h5>
+          <Company />
         </div>
       </section>
 
+      <hr className="my-14 border-zinc-200 dark:border-zinc-700" />
 
-
+      <div className="mb-10">
+        <div className="flex justify-between items-end mb-8">
+          <h2 className="text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 m-0">
+            Selected Case Study
+          </h2>
+          {/* <Link
+            href="/case-study"
+            className="text-sm font-semibold text-zinc-500 hover:text-teal-600 dark:text-zinc-400 dark:hover:text-teal-500 transition-colors no-underline flex items-center gap-1"
+          >
+            See all <HiChevronRight className="text-xs" />
+          </Link> */}
+          <Button variant="secondary" asChild>
+            <Link href="/case-study" className=" flex items-center gap-1 no-underline pr-3">
+              See all <HiChevronRight /> 
+            </Link>
+          </Button>
+          
+        </div>
+        <Case />
+      </div>
     </div>
-
-
-
-
   )
 }
 

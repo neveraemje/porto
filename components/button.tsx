@@ -14,7 +14,7 @@ const Button = ({ href, children }: ButtonProps) => {
     <Link href={href}
       className="
         no-underline
-        relative m-1 inline-flex cursor-pointer items-center justify-center rounded-xl 
+        relative m-1 inline-flex cursor-pointer items-center justify-center rounded-full 
         border-b-4 
         border-l-2 
         border-r-2 

@@ -60,13 +60,13 @@ const page = () => {
 
   return (
     <div className="prose dark:prose-invert max-w-3xl sm:mt-14 mt-10 mx-6 sm:mx-auto">
-   
+
 
       <section className="mx-0 sm:mx-10">
         <div className=" flex flex-col">
           <div className=" flex flex-col justify-center  gap-2 text-left">
-            <h1 className=" font-semibold bg-gradient-to-b from-zinc-700 to-zinc-500 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent text-3xl lg:text-3xl mb-0">
-              A Product Designer with 7+ years of experience, focused on creating user-centered designs and design systems for businesses.
+            <h1 className=" font-semibold bg-gradient-to-b from-zinc-700 to-zinc-500 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent text-3xl lg:text-3xl mb-0 tracking-tight">
+              Product Designer with 9+ years of experience, leading and scaling user-centered design systems for businesses.
             </h1>
             <div className="columns-2 sm:columns-3 gap-4 mt-6 z-20">
               <div className=" h-40 w-full relative hidden sm:block mb-4">
@@ -99,7 +99,7 @@ const page = () => {
                   className="mt-0 object-cover h-full rounded-lg"
                 />
               </div>
-             {/* <div className="h-80 w-full relative">
+              {/* <div className="h-80 w-full relative">
                 <video
                   src="/profile/sepeda.mp4"
                   className="mt-0 object-cover h-full rounded-lg"
@@ -109,7 +109,7 @@ const page = () => {
                   loop
                 />
             </div> */}
-            <div className="h-80 w-full relative hidden sm:block">
+              <div className="h-80 w-full relative hidden sm:block">
                 <video
                   src="/profile/sepeda.mp4"
                   className="mt-0 w-full h-full object-fill rounded-lg"
@@ -121,48 +121,40 @@ const page = () => {
               </div>
             </div>
 
-            <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700  text-justify">
-              Hi, I am Emje, a product designer from Indonesia with 7+ years of experience. My Informatics Engineering background helps me blend design, tech, and business. I have worked across software houses, AI, on-demand platforms, SaaS, B2B, and B2C.
+            <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700 tracking-tight leading-relaxed">
+              Hi, I am Emje, a Product Designer from Indonesia with a background in Informatics Engineering, bridging design, tech, and business.
             </p>
-            <p className=" mt-6 text-base dark:text-zinc-300 text-zinc-700  text-justify">
-              I kicked off my career as a graphic designer in college and later
-              transitioned to becoming a UI/UX Designer at <a
+            <p className=" mt-6 text-base dark:text-zinc-300 text-zinc-700 tracking-tight leading-relaxed">
+              I started as a graphic designer in college, then transitioned into UI/UX at <a
                 href="https://sisi.id/"
                 target="_blank"
-                className="underline decoration-pink-500 font-semibold decoration-2"
+                className="no-underline  font-semibold text-sky-500"
               >SISI
               </a> and <a
                 href="https://www.dot.co.id/"
                 target="_blank"
-                className="underline decoration-orange-500 font-semibold decoration-2"
+                className="text-green-600 font-semibold no-underline"
               >
                 DOT Indonesia
-              </a> until 2019. After that, I joined <a
+              </a> until 2019. I later joined <a
                 href="http://kata.ai/"
                 target="_blank"
-                className="underline decoration-blue-400 font-semibold decoration-2"
+                className="no-underline  font-semibold text-blue-500"
               >
                 Kata.ai
-              </a>, an AI and SaaS company, contributing to chatbot platform features,
-              rebranding, and creating the Aksara Design System.
+              </a>, an AI SaaS company, where I contributed to chatbot platform features, led rebranding efforts, and helped establish the Aksara Design System.
             </p>
-            <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700  text-justify">
-              Currently, I am a Product Designer at <a
+            <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700 tracking-tight leading-relaxed">
+              Currently, I’m at <a
                 href="https://www.gojek.com/en-id/"
                 target="_blank"
-                className="underline decoration-green-600 font-semibold decoration-2"
+                className="no-underline  font-semibold text-green-600"
               >
                 Gojek
-              </a>, involved in evolving the Asphalt Design System, standardizing 18+
-              products, and enabling designers to leverage our system. We have also
-              built an in-house Figma plugin and a central hub for design system
-              documentation, saving considerable time and costs annually.
+              </a>, leading the evolution of the Asphalt Design System—scaling it across 20+ teams and 5+ products, with 62 components and 77K+ weekly insertions. I drive adoption by aligning cross-functional teams, shaping system strategy, and balancing consistency with product needs.
             </p>
-            <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700  text-justify">
-              Through my journey, I see design as a constant learning process,
-              like a traveler exploring an unknown path. It is a bit like a
-              challenging hike, where patience and resilience are key to reaching
-              success.
+            <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700 tracking-tight leading-relaxed">
+              I see design as a continuous journey—like exploring an unknown path, where patience, resilience, and thoughtful decisions shape the outcome.
             </p>
           </div>
 
@@ -202,7 +194,7 @@ const page = () => {
             <h3 className="flex text-lg font-semibold  text-zinc-800 dark:text-zinc-300 mr-12 mt-0">
               <span className=" ml-2">
                 {" "}
-                7+ years of professional experience in design
+                9+ years of professional experience in design
               </span>
             </h3>
             <ol className=" space-y-4 mt-0 pl-0">

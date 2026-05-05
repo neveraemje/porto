@@ -46,32 +46,64 @@
 
 "use client"
 
+import React from "react"
 import { useTheme } from "next-themes"
-import { HiSun, HiMoon  } from "react-icons/hi";
+import { HiSun, HiMoon } from "react-icons/hi";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function ModeToggle() {
   const { setTheme, theme } = useTheme()
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return (
+      <div className="flex rounded-full w-9 h-9 items-center justify-center">
+        <div className="w-5 h-5" />
+      </div>
+    )
+  }
+
+  const iconVariants = {
+    sunHover: { rotate: 90, scale: 1.1 },
+    moonHover: { rotate: -15, scale: 1.1 },
+  };
 
   return (
-    <button
+    <motion.button
+      whileHover="hover"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className=" hidden sm:flex rounded-full bg-zinc-100 dark:bg-zinc-700  
-      w-8 h-8 
-      
-      items-center justify-center hover:bg-gray-200 dark:hover:bg-zinc-900">
-      
-      
+      className="group flex bg-black/5 dark:bg-white/5 rounded-full w-9 h-9 items-center justify-center text-zinc-600 dark:text-white hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-300 relative overflow-hidden"
+    >
       <span className="sr-only">Toggle mode</span>
-      {theme !== "dark" ? (
- 
-        
-          <HiMoon className=" w-5 h-5"/>
-   
-      ) : (
-        <HiSun className="w-5 h-5"/>
-    
-      
-      )}
-    </button>
+      <AnimatePresence mode="wait" initial={false}>
+        {theme === "dark" ? (
+          <motion.div
+            key="sun"
+            initial={{ y: 20, opacity: 0, rotate: -90 }}
+            animate={{ y: 0, opacity: 1, rotate: 0 }}
+            exit={{ y: -20, opacity: 0, rotate: 90 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            variants={{ hover: iconVariants.sunHover }}
+          >
+            <HiSun className="w-5 h-5" />
+          </motion.div>
+        ) : (
+          <motion.div
+            key="moon"
+            initial={{ y: 20, opacity: 0, rotate: 90 }}
+            animate={{ y: 0, opacity: 1, rotate: 0 }}
+            exit={{ y: -20, opacity: 0, rotate: -90 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            variants={{ hover: iconVariants.moonHover }}
+          >
+            <HiMoon className="w-5 h-5" />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.button>
   )
 }

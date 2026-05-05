@@ -11,11 +11,11 @@ export const metadata: Metadata = {
       default: "emje.vercel.app",
       template: "%s | emje.vercel.app",
     },
-    description: "A Product Designer and Coding Enthusiast with 7+ years of experience",
+    description: "A Product Designer and Coding Enthusiast with 9+ years of experience",
     openGraph: {
       title: "emje.vercel.app",
       description:
-        "A Product Designer and Coding Enthusiast with 7+ years of experience",
+        "A Product Designer and Coding Enthusiast with 9+ years of experience",
       url: "https://emje.vercel.app/",
       siteName: "emje.vercel.app",
       images: [

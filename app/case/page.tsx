@@ -1,4 +1,5 @@
-import { allPosts } from "@/.contentlayer/generated"
+import { posts } from "@/velite-data"
+
 import Link from "next/link"
 import Image from "next/image"
 import { CaseStudies } from "@/components/case2"

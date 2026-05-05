@@ -1,24 +1,19 @@
 
-
-import User from "@/components/(guestbook)/User";
+import { connectMongoDB } from "@/utils/config/mongodb";
+import User from "@/utils/models/user";
+import UserComponent from "@/components/(guestbook)/User";
 import { Suspense } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 
 const guestData = async () => {
   try {
-
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/user`, {
-      cache: "no-cache"
-    })
-
-    if (!res.ok) {
-      throw new Error("Failed to fetch guest")
-    }
-
-    return res.json()
+    await connectMongoDB();
+    const guest = await User.find().lean();
+    return { guest: JSON.parse(JSON.stringify(guest)) }; // Ensure plain objects for serialization
   } catch (error) {
-    console.log("Erro fetch topic", error)
+    console.log("Error fetching guestbook data:", error);
+    return null;
   }
 }
 
@@ -44,7 +39,7 @@ export default async function GuestBook() {
   return (
     <div className="prose dark:prose-invert max-w-2xl sm:mt-14 mt-10 mx-6 sm:mx-auto">
 
-      <User />
+      <UserComponent />
       <Suspense>
         <section className=" mx-0 sm:mx-10 mt-10">
           <div className="flex flex-col md:flex-row gap-1 md:gap-12 w-full">
@@ -105,7 +100,7 @@ export default async function GuestBook() {
                       </div>
 
                       {/* Apply word and character wrapping */}
-                      <div className="text-base font-[450] text-zinc-700 dark:text-zinc-200 break-all break-words whitespace-normal">
+                      <div className="text-base font-[450] text-zinc-700 dark:text-zinc-200 break-words whitespace-normal">
                         {tamu.msg}
                       </div>
                     </div>
@@ -133,5 +128,3 @@ export default async function GuestBook() {
 //   };
 // };
 
-
-export const runtime = 'edge'

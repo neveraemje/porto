@@ -1,18 +1,19 @@
 import { notFound } from "next/navigation"
 import { Metadata } from "next"
-import { allPages } from "contentlayer/generated"
+import { pages } from "@/velite-data"
 
 import { Mdx } from "@/components/mdx-components"
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string[]
-  }
+  }>
 }
 
 async function getPageFromParams(params: PageProps["params"]) {
-  const slug = params?.slug?.join("/")
-  const page = allPages.find((page) => page.slugAsParams === slug)
+  const { slug: slugArray } = await params
+  const slug = slugArray?.join("/")
+  const page = pages.find((page) => page.slugAsParams === slug)
 
   if (!page) {
     null
@@ -36,8 +37,8 @@ export async function generateMetadata({
   }
 }
 
-export async function generateStaticParams(): Promise<PageProps["params"][]> {
-  return allPages.map((page) => ({
+export async function generateStaticParams(): Promise<Awaited<PageProps["params"]>[]> {
+  return pages.map((page) => ({
     slug: page.slugAsParams.split("/"),
   }))
 }
@@ -54,7 +55,7 @@ export default async function PagePage({ params }: PageProps) {
       {/* <h1>{page.title}</h1> */}
       {/* {page.description && <p className="text-3xl font-medium">{page.description}</p>} */}
       {/* <hr /> */}
-      <Mdx code={page.body.code} />
+      <Mdx code={page!.body} />
     </article>
   )
 }
