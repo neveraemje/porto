@@ -43,7 +43,7 @@ export default function ByHandPage() {
           By Hand
         </h1>
         <p className="text-zinc-600 dark:text-zinc-400 text-lg max-w-2xl leading-relaxed">
-          Outside of pixels and code, I spend my time working with wood. There's a unique satisfaction in building something tangible that lives in the physical world. 🪚🪵
+          Outside of pixels and code, I spend my time working with wood. There is a unique satisfaction in building something tangible that lives in the physical world. 🪚🪵
         </p>
       </motion.div>
 
