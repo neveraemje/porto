@@ -1,24 +1,21 @@
 import { NextRequest, NextResponse } from "next/server"
 import { connectMongoDB } from "@/utils/config/mongodb"
 import User from "@/utils/models/user"
+import {
+  DEFAULT_POSTCARD_IMAGE,
+  normalizePostcardImage,
+} from "@/lib/postcard-images"
 
-const DEFAULT_POSTAGE_IMAGE = "/postcards/madinah.jpg";
 const MAX_MESSAGE_LENGTH = 220;
 const ALLOWED_CARD_COLORS = new Set(["yellow", "red", "blue", "green", "sky", "coral", "lavender", "mint", "rose", "stone"]);
-const ALLOWED_POSTAGE_IMAGES = new Set([
-  "/postcards/madinah.jpg",
-  "/postcards/sunflower.jpg",
-  "/postcards/flowers.jpg",
-  "/postcards/mountain.jpg",
-  "/postcards/orca.jpg",
-]);
 
 const sanitizePostageImage = (value) => {
-  if (ALLOWED_POSTAGE_IMAGES.has(value)) return value;
-  if (typeof value !== "string" || value.length > 3_000_000) return DEFAULT_POSTAGE_IMAGE;
+  const postcardImage = normalizePostcardImage(value);
+  if (postcardImage) return postcardImage;
+  if (typeof value !== "string" || value.length > 3_000_000) return DEFAULT_POSTCARD_IMAGE;
   return /^data:image\/(png|jpe?g|webp|gif);base64,/i.test(value)
     ? value
-    : DEFAULT_POSTAGE_IMAGE;
+    : DEFAULT_POSTCARD_IMAGE;
 };
 
 // export async function POST(request) {

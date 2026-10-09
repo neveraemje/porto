@@ -5,6 +5,7 @@ import Image from "next/image";
 import { HiArrowUp, HiPlus, HiX } from "react-icons/hi";
 import { useRouter } from "next/navigation";
 import { Translate, useLanguage } from "@/components/language-provider";
+import { POSTCARD_IMAGES } from "@/lib/postcard-images";
 
 const MAX_NAME_LENGTH = 30;
 const MAX_MESSAGE_LENGTH = 220;
@@ -20,14 +21,6 @@ const CARD_COLORS = [
   { id: "rose", label: "Rose", swatch: "#d79aab" },
   { id: "stone", label: "Stone", swatch: "#aaa59b" },
 ] as const;
-const POSTAGE_IMAGES = [
-  { id: "madinah", label: "Madinah", src: "/postcards/madinah.jpg" },
-  { id: "sunflower", label: "Sunflower", src: "/postcards/sunflower.jpg" },
-  { id: "flowers", label: "Flowers", src: "/postcards/flowers.jpg" },
-  { id: "mountain", label: "Mountain", src: "/postcards/mountain.jpg" },
-  { id: "orca", label: "Orca", src: "/postcards/orca.jpg" },
-] as const;
-
 const readFileAsDataUrl = (file: File) => new Promise<string>((resolve, reject) => {
   const reader = new FileReader();
   reader.onload = () => typeof reader.result === "string" ? resolve(reader.result) : reject(new Error("Invalid image"));
@@ -74,13 +67,13 @@ export default function GuestCard() {
   const [sent, setSent] = useState(false);
   const [submitError, setSubmitError] = useState("");
   const [cardColor, setCardColor] = useState<(typeof CARD_COLORS)[number]["id"]>("yellow");
-  const [postageImage, setPostageImage] = useState<(typeof POSTAGE_IMAGES)[number]["id"] | "custom">("madinah");
+  const [postageImage, setPostageImage] = useState<(typeof POSTCARD_IMAGES)[number]["id"] | "custom">("madinah");
   const [customImage, setCustomImage] = useState<string | null>(null);
   const uploadInputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
   const selectedPostage = postageImage === "custom" && customImage
     ? { label: "Custom", src: customImage }
-    : POSTAGE_IMAGES.find((image) => image.id === postageImage) ?? POSTAGE_IMAGES[0];
+    : POSTCARD_IMAGES.find((image) => image.id === postageImage) ?? POSTCARD_IMAGES[0];
 
   useEffect(() => {
     if (!isOpen) return;
@@ -299,9 +292,13 @@ export default function GuestCard() {
           ))}
           </div>
 
-          <div aria-label={t("Postage image")} className="flex items-center gap-1.5 sm:gap-2.5" role="group">
+          <div
+            aria-label={t("Postage image")}
+            className="flex max-w-[calc(100vw-2rem)] items-center gap-1.5 overflow-x-auto px-1 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            role="group"
+          >
             <input ref={uploadInputRef} type="file" accept="image/*" onChange={handleImageUpload} className="sr-only" />
-            <div className="relative h-[33px] w-11 shrink-0 sm:h-[54px] sm:w-[72px]">
+            <div className="relative h-[33px] w-11 shrink-0">
               <button
                 type="button"
                 aria-label={t("Upload custom postage image")}
@@ -315,7 +312,7 @@ export default function GuestCard() {
                 }`}
               >
                 {customImage ? (
-                  <Image unoptimized alt="" aria-hidden="true" src={customImage} fill sizes="(min-width: 640px) 72px, 44px" className="object-cover" />
+                  <Image unoptimized alt="" aria-hidden="true" src={customImage} fill sizes="44px" className="object-cover" />
                 ) : (
                   <span className="absolute inset-[3px] flex flex-col items-center justify-center border border-dashed border-zinc-500/35 leading-none">
                     <HiPlus aria-hidden="true" className="h-3 w-3 sm:h-4 sm:w-4" />
@@ -335,7 +332,7 @@ export default function GuestCard() {
                 </button>
               )}
             </div>
-            {POSTAGE_IMAGES.map((image) => (
+            {POSTCARD_IMAGES.map((image) => (
               <button
                 key={image.id}
                 type="button"
@@ -343,13 +340,13 @@ export default function GuestCard() {
                 aria-pressed={postageImage === image.id}
                 title={t(image.label)}
                 onClick={() => setPostageImage(image.id)}
-                className={`relative h-[33px] w-11 overflow-hidden rounded border-2 bg-white transition-[transform,box-shadow] hover:scale-105 sm:h-[54px] sm:w-[72px] ${
+                className={`relative h-[33px] w-11 shrink-0 overflow-hidden rounded border-2 bg-white transition-[transform,box-shadow] hover:scale-105 ${
                   postageImage === image.id
                     ? "scale-105 border-white shadow-[0_0_0_2px_#3f372d,0_3px_10px_rgba(0,0,0,0.3)]"
                     : "border-white/70 shadow-sm"
                 }`}
               >
-                <Image alt="" aria-hidden="true" src={image.src} fill sizes="(min-width: 640px) 72px, 44px" className="object-cover" />
+                <Image alt="" aria-hidden="true" src={image.src} fill sizes="44px" className="object-cover" />
               </button>
             ))}
           </div>

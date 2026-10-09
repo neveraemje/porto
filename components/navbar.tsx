@@ -31,8 +31,8 @@ const NavBar = () => {
   return (
     <div className="fixed left-1/2 top-6 z-50 flex w-[calc(100%-24px)] -translate-x-1/2 items-center gap-2 sm:w-[664px] sm:max-w-[calc(100%-32px)]">
       <nav className={`
-        relative h-12 min-w-0 flex-1 md:w-[600px] md:flex-none sm:h-14
-        rounded-full border border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-950
+        relative h-12 min-w-0 flex-1 overflow-hidden rounded-full md:w-[600px] md:flex-none sm:h-14
+        border border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-950
         transition-shadow duration-500
         shadow-[0_8px_24px_rgba(0,0,0,0.12),0_0_1px_rgba(0,0,0,0.1)]
       `}>
@@ -49,11 +49,19 @@ const NavBar = () => {
                       : "text-black/80 dark:text-white hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5"}`}
                     aria-current={activePath === item.path ? (pathname === item.path ? "page" : "location") : undefined}>
                     {activePath === item.path && (
-                      <motion.div
-                        layoutId="active-nav-bubble"
-                        className="absolute inset-0 rounded-full bg-zinc-100 dark:bg-zinc-800 z-[-1]"
-                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                      />
+                      <>
+                        <motion.div
+                          layoutId="active-nav-bubble"
+                          className="absolute inset-0 rounded-full bg-zinc-100 dark:bg-zinc-800 z-[-1]"
+                          transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                        />
+                        <motion.span
+                          layoutId="active-nav-topline"
+                          aria-hidden="true"
+                          className={`navbar-topline pointer-events-none absolute -top-2 bottom-0 border-t border-teal-500 sm:-top-2.5 ${item.path === "/" ? "left-0 -right-3" : "-left-3 -right-3"}`}
+                          transition={{ type: "spring", bounce: 0.12, duration: 0.6 }}
+                        />
+                      </>
                     )}
                     <span className="relative z-[1]"><Translate>{item.title}</Translate></span>
                   </Link>

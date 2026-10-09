@@ -1,4 +1,5 @@
 import mongoose, { Schema, models } from "mongoose";
+import { DEFAULT_POSTCARD_IMAGE } from "@/lib/postcard-images";
 
 const userSchema = new Schema(
     {
@@ -21,7 +22,7 @@ const userSchema = new Schema(
       },
       postageImage: {
         type: String,
-        default: "/postcards/madinah.jpg",
+        default: DEFAULT_POSTCARD_IMAGE,
       },
       cardColor: {
         type: String,
@@ -39,7 +40,7 @@ if (!User.schema.path('postageImage')) {
   User.schema.add({
     postageImage: {
       type: String,
-      default: "/postcards/madinah.jpg",
+      default: DEFAULT_POSTCARD_IMAGE,
     },
   })
 }

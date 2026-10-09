@@ -5,20 +5,17 @@ import Image from "next/image";
 import { Suspense } from "react";
 import { Translate } from "@/components/language-provider";
 import GuestbookIntro from "@/components/(guestbook)/GuestbookIntro";
+import {
+  POSTCARD_IMAGES,
+  POSTCARD_IMAGE_SOURCES,
+  normalizePostcardImage,
+} from "@/lib/postcard-images";
 
 export const dynamic = "force-dynamic";
 
 const CARD_COLORS = ["yellow", "red", "blue", "green", "sky", "coral", "lavender", "mint", "rose", "stone"] as const;
 const POSTCARD_LABELS = ["Kartu pos", "Postcard", "はがき", "بطاقة بريدية", "Открытка", "明信片", "Cartolina", "Postkarte"] as const;
 const LATIN_POSTCARD_LABELS = new Set(["Kartu pos", "Postcard", "Cartolina", "Postkarte"]);
-const POSTAGE_IMAGES = [
-  { label: "Madinah", src: "/postcards/madinah.jpg" },
-  { label: "Sunflower", src: "/postcards/sunflower.jpg" },
-  { label: "Flowers", src: "/postcards/flowers.jpg" },
-  { label: "Mountain", src: "/postcards/mountain.jpg" },
-  { label: "Orca", src: "/postcards/orca.jpg" },
-] as const;
-const POSTAGE_IMAGE_SOURCES = new Set(POSTAGE_IMAGES.map((image) => image.src));
 
 interface GuestEntry {
   name: string;
@@ -54,8 +51,12 @@ const guestData = async () => {
       const isCustomImage = typeof entry.postageImage === "string"
         && /^data:image\/(png|jpe?g|webp|gif);base64,/i.test(entry.postageImage)
         && entry.postageImage.length <= 3_000_000;
-      if (!POSTAGE_IMAGE_SOURCES.has(entry.postageImage) && !isCustomImage) {
-        changes.postageImage = POSTAGE_IMAGES[hashString(`${entry._id}:postage`) % POSTAGE_IMAGES.length].src;
+      const normalizedPostageImage = normalizePostcardImage(entry.postageImage);
+      if (normalizedPostageImage && normalizedPostageImage !== entry.postageImage) {
+        changes.postageImage = normalizedPostageImage;
+        entry.postageImage = normalizedPostageImage;
+      } else if (!POSTCARD_IMAGE_SOURCES.has(entry.postageImage) && !isCustomImage) {
+        changes.postageImage = POSTCARD_IMAGES[hashString(`${entry._id}:postage`) % POSTCARD_IMAGES.length].src;
         entry.postageImage = changes.postageImage;
       }
 
@@ -119,8 +120,8 @@ async function GuestCards() {
           const displayedMessage = tamu.msg.length > 220
             ? `${tamu.msg.slice(0, 220).trimEnd()}...`
             : tamu.msg;
-          const postage = POSTAGE_IMAGES.find((image) => image.src === tamu.postageImage)
-            ?? { label: "Selected", src: tamu.postageImage ?? POSTAGE_IMAGES[0].src };
+          const postage = POSTCARD_IMAGES.find((image) => image.src === tamu.postageImage)
+            ?? { label: "Selected", src: tamu.postageImage ?? POSTCARD_IMAGES[0].src };
 
           return (
             <li

@@ -59,6 +59,9 @@ export const arabic: Record<string, string> = {
   "Flowers": "أزهار",
   "Mountain": "الجبل",
   "Orca": "الحوت القاتل",
+  "Boat": "قارب",
+  "Coffee": "قهوة",
+  "Rooster": "ديك",
 
   "Yellow": "أصفر",
   "Red": "أحمر",
