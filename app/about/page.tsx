@@ -1,4 +1,5 @@
 import React from "react";
+import { Translate } from "@/components/language-provider";
 import Link from "next/link";
 import { HiDownload } from "react-icons/hi";
 import { Button } from "@/components/ui/button";
@@ -66,7 +67,7 @@ const page = () => {
         <div className=" flex flex-col">
           <div className=" flex flex-col justify-center  gap-2 text-left">
             <h1 className=" font-semibold bg-gradient-to-b from-zinc-700 to-zinc-500 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent text-3xl lg:text-3xl mb-0 tracking-tight">
-              Product Designer with 9+ years of experience, leading and scaling user-centered design systems for businesses.
+              <Translate>Product Designer with 9+ years of experience, leading and scaling user-centered design systems for businesses.</Translate>
             </h1>
             <div className="columns-2 sm:columns-3 gap-4 mt-6 z-20">
               <div className=" h-40 w-full relative hidden sm:block mb-4">
@@ -122,39 +123,39 @@ const page = () => {
             </div>
 
             <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700 tracking-tight leading-relaxed">
-              Hi, I am Emje, a Product Designer from Indonesia with a background in Informatics Engineering, bridging design, tech, and business.
+              <Translate>Hi, I am Emje, a Product Designer from Indonesia with a background in Informatics Engineering, bridging design, tech, and business.</Translate>
             </p>
             <p className=" mt-6 text-base dark:text-zinc-300 text-zinc-700 tracking-tight leading-relaxed">
-              I started as a graphic designer in college, then transitioned into UI/UX at <a
+              <Translate ar="بدأت مصممًا جرافيكيًا خلال الدراسة الجامعية، ثم انتقلت إلى تصميم تجربة المستخدم وواجهاته في">I started as a graphic designer in college, then transitioned into UI/UX at</Translate> <a
                 href="https://sisi.id/"
                 target="_blank"
                 className="no-underline  font-semibold text-sky-500"
               >SISI
-              </a> and <a
+              </a> <Translate ar="و">and</Translate> <a
                 href="https://www.dot.co.id/"
                 target="_blank"
                 className="text-green-600 font-semibold no-underline"
               >
                 DOT Indonesia
-              </a> until 2019. I later joined <a
+              </a> <Translate ar="حتى عام ٢٠١٩. ثم انضممت إلى">until 2019. I later joined</Translate> <a
                 href="http://kata.ai/"
                 target="_blank"
                 className="no-underline  font-semibold text-blue-500"
               >
                 Kata.ai
-              </a>, an AI SaaS company, where I contributed to chatbot platform features, led rebranding efforts, and helped establish the Aksara Design System.
+              </a><Translate ar="، وهي شركة تقدم برمجيات الذكاء الاصطناعي بوصفها خدمة. ساهمت في تطوير ميزات منصة المحادثات، وقُدت تجديد الهوية، وساعدت في تأسيس نظام التصميم Aksara.">, an AI SaaS company, where I contributed to chatbot platform features, led rebranding efforts, and helped establish the Aksara Design System.</Translate>
             </p>
             <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700 tracking-tight leading-relaxed">
-              Currently, I am at <a
+              <Translate ar="أعمل حاليًا في">Currently, I am at</Translate> <a
                 href="https://www.gojek.com/en-id/"
                 target="_blank"
                 className="no-underline  font-semibold text-green-600"
               >
                 Gojek
-              </a>, leading the evolution of the Asphalt Design System—scaling it across 20+ teams and 5+ products, with 62 components and 77K+ weekly insertions. I drive adoption by aligning cross-functional teams, shaping system strategy, and balancing consistency with product needs.
+              </a><Translate ar="، حيث أقود تطوير نظام التصميم Asphalt وتوسيع نطاقه ليخدم أكثر من ٢٠ فريقًا و٥ منتجات، مع ٦٢ مكوّنًا وأكثر من ٧٧ ألف إدراج أسبوعيًا. أشجّع تبنّي النظام بمواءمة الفرق متعددة التخصصات، وصياغة استراتيجيته، والموازنة بين الاتساق واحتياجات المنتجات.">, leading the evolution of the Asphalt Design System—scaling it across 20+ teams and 5+ products, with 62 components and 77K+ weekly insertions. I drive adoption by aligning cross-functional teams, shaping system strategy, and balancing consistency with product needs.</Translate>
             </p>
             <p className="mt-6 text-base dark:text-zinc-300 text-zinc-700 tracking-tight leading-relaxed">
-              I see design as a continuous journey—like exploring an unknown path, where patience, resilience, and thoughtful decisions shape the outcome.
+              <Translate>I see design as a continuous journey—like exploring an unknown path, where patience, resilience, and thoughtful decisions shape the outcome.</Translate>
             </p>
           </div>
 
@@ -167,6 +168,7 @@ const page = () => {
           {/* <Button href="https://www.dropbox.com/scl/fi/u3ojh09hdqneidiwj0gr6/MJ-Arifin-Resume.pdf?rlkey=yp3zv4iuhruo5usygbdavi4wc&dl=0">
           Download my resume <HiDownload />
         </Button> */}
+          {/* Resume temporarily hidden.
           <Button asChild>
             <Link
               href="https://www.dropbox.com/scl/fi/u3ojh09hdqneidiwj0gr6/MJ-Arifin-Resume.pdf?rlkey=yp3zv4iuhruo5usygbdavi4wc&e=1&dl=0"
@@ -178,6 +180,7 @@ const page = () => {
 
             </Link>
           </Button>
+          */}
 
         </div>
 
@@ -187,14 +190,14 @@ const page = () => {
       <section className=" mx-0 sm:mx-10 mt-10">
         <div className="flex flex-col md:flex-row gap-1 md:gap-12 w-full">
           <h2 className=" md:w-12 flex text-lg font-semibold  text-zinc-600 dark:text-zinc-400 mr-12 mt-0">
-            <span className=" ml-2">Work</span>
+            <span className=" ml-2"><Translate>Work</Translate></span>
           </h2>
 
           <div className="flex flex-col gap-1 w-full mt-0">
             <h3 className="flex text-lg font-semibold  text-zinc-800 dark:text-zinc-300 mr-12 mt-0">
               <span className=" ml-2">
                 {" "}
-                9+ years of professional experience in design
+                <Translate>9+ years of professional experience in design</Translate>
               </span>
             </h3>
             <ol className=" space-y-4 mt-0 pl-0">
@@ -214,17 +217,17 @@ const page = () => {
                   </div>
                   <dl className="flex flex-auto flex-wrap gap-x-2 mt-0 mb-0">
                     <dd className="w-full flex-none text-base font-semibold text-zinc-800 dark:text-zinc-100 pl-0 pt-0 mt-0">
-                      {item.name}
+                      <Translate>{item.name}</Translate>
                     </dd>
                     <div className="justify-between items-center w-full sm:flex">
                       <dd className="text-sm text-zinc-500 font-medium dark:text-zinc-400 pl-0 pt-0 mt-0">
-                        {item.position}
+                        <Translate>{item.position}</Translate>
                       </dd>
                       <dd
                         className="text-sm font-medium text-zinc-500 dark:text-zinc-400 pl-0 pt-0 mt-0"
                         aria-label="2019 until Present"
                       >
-                        {item.date}
+                        <Translate>{item.date}</Translate>
                       </dd>
                     </div>
                   </dl>
@@ -240,14 +243,14 @@ const page = () => {
       <section className=" mx-0 sm:mx-10 mt-10">
         <div className="flex flex-col md:flex-row gap-1 md:gap-12 w-full">
           <h2 className=" md:w-12 flex text-lg font-semibold  text-zinc-600 dark:text-zinc-400 mr-12 mt-0">
-            <span className=" ml-2">Community</span>
+            <span className=" ml-2"><Translate>Community</Translate></span>
           </h2>
 
           <div className="flex flex-col gap-1 w-full mt-0">
             <h3 className="flex text-lg font-semibold  text-zinc-800 dark:text-zinc-300 mr-12 mt-0">
               <span className=" ml-2">
                 {" "}
-                Engaged within the community.
+                <Translate>Engaged within the community.</Translate>
               </span>
             </h3>
             <ol className=" space-y-4 mt-0 pl-0">
@@ -271,13 +274,13 @@ const page = () => {
                     </dd>
                     <div className="justify-between items-center w-full sm:flex">
                       <dd className="text-sm text-zinc-500 font-medium dark:text-zinc-400 pl-0 pt-0 mt-0">
-                        {item.position}
+                        <Translate>{item.position}</Translate>
                       </dd>
                       <dd
                         className="text-sm font-medium text-zinc-500 dark:text-zinc-400 pl-0 pt-0 mt-0"
                         aria-label="2019 until Present"
                       >
-                        {item.date}
+                        <Translate>{item.date}</Translate>
                       </dd>
                     </div>
                   </dl>
@@ -292,7 +295,7 @@ const page = () => {
       <section className=" mx-0 sm:mx-10 mt-10">
         <div className="flex flex-col md:flex-row gap-1 md:gap-12 w-full">
           <h2 className=" md:w-12 flex text-lg font-semibold  text-zinc-600 dark:text-zinc-400 mr-12 mt-0">
-            <span className=" ml-2">Contributions</span>
+            <span className=" ml-2"><Translate>Contributions</Translate></span>
           </h2>
 
           <div className="flex flex-col gap-1 w-full mt-0">
@@ -300,16 +303,16 @@ const page = () => {
               <span className=" ml-2">
 
 
-                Contributing and learning on my journey.
+                <Translate>Contributing and learning on my journey.</Translate>
               </span>
             </h3>
             <ul className=" space-y-4 mt-0 pl-6">
               {contribution.map((item, index) => (
                 <li className=" text-base" key={index}>
-                  {item.object}
+                  <Translate>{item.object}</Translate>
                   {/* <dl className="flex flex-auto flex-wrap gap-x-2 mt-0 mb-0">
                   <dd className="w-full flex-none text-base font-semibold text-zinc-800 dark:text-zinc-100 pl-0 pt-0 mt-0">
-                    {item.object}
+                    <Translate>{item.object}</Translate>
                   </dd>
             
                 </dl> */}

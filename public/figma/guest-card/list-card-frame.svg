@@ -1,0 +1,30 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="381" height="207" viewBox="0 0 381 207" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 2147228422">
+<g clip-path="url(#clip0_0_7)">
+<g id="Group 1000011595">
+<path id="Vector 40" d="M55.5 44.5L55.5 206.5" stroke="#B8A27E"/>
+<path id="Vector 44" d="M40.5 44.5L40.5 206.5" stroke="#B8A27E"/>
+<path id="Vector 41" d="M71.5 44.5L71.5 206.5" stroke="#B8A27E"/>
+<path id="Vector 42" d="M87.5 44.5L87.5 206.5" stroke="#B8A27E"/>
+<path id="Vector 43" d="M103.5 44.5L103.5 206.5" stroke="#B8A27E"/>
+</g>
+<g id="Group 1000011596">
+<path id="Vector 40_2" d="M55.5 -147.5L55.5 14.5" stroke="#B8A27E"/>
+<path id="Vector 44_2" d="M40.5 -147.5L40.5 14.5" stroke="#B8A27E"/>
+<path id="Vector 41_2" d="M71.5 -147.5L71.5 14.5" stroke="#B8A27E"/>
+<path id="Vector 42_2" d="M87.5 -147.5L87.5 14.5" stroke="#B8A27E"/>
+<path id="Vector 43_2" d="M103.5 -147.5L103.5 14.5" stroke="#B8A27E"/>
+</g>
+<circle id="Ellipse 36" cx="0.5" cy="0.5" r="14" stroke="#B8A27E"/>
+<circle id="Ellipse 37" cx="-0.5" cy="206.5" r="14" stroke="#B8A27E"/>
+<circle id="Ellipse 38" cx="379.5" cy="1.5" r="14" stroke="#B8A27E"/>
+<circle id="Ellipse 39" cx="380.5" cy="206.5" r="14" stroke="#B8A27E"/>
+</g>
+<rect x="0.5" y="0.5" width="380" height="206" stroke="#B8A27E"/>
+</g>
+<defs>
+<clipPath id="clip0_0_7">
+<rect x="0.5" y="0.5" width="380" height="206" fill="white"/>
+</clipPath>
+</defs>
+</svg>

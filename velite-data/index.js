@@ -2,3 +2,4 @@
 
 export { default as pages } from './pages.json'
 export { default as posts } from './posts.json'
+export { default as arabicPosts } from './arabicPosts.json'

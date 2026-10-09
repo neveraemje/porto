@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="feather" x1="15" y1="8" x2="46" y2="49" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white"/>
+      <stop offset="0.55" stop-color="#eefff8" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#9de4c9" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="cork" x1="25" y1="43" x2="40" y2="57" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white"/><stop offset="1" stop-color="#b4ebd8"/>
+    </linearGradient>
+  </defs>
+  <g stroke="white" stroke-opacity="0.65" stroke-width="0.8" stroke-linejoin="round">
+    <path d="M26 44 11 15Q10 10 15 11L24 17 28 43Z" fill="url(#feather)"/>
+    <path d="M28 44 20 11Q20 7 25 9L30 15 31 44Z" fill="url(#feather)"/>
+    <path d="M30 44 28 9Q32 3 36 9L34 44Z" fill="url(#feather)"/>
+    <path d="M33 44 34 15 39 9Q44 7 44 11L36 44Z" fill="url(#feather)"/>
+    <path d="M36 43 40 17 49 11Q54 10 53 15L38 44Z" fill="url(#feather)"/>
+    <path d="M20 31Q32 37 44 31M24 39Q32 43 40 39" stroke-width="1.5"/>
+    <path d="M25 44H39V49C39 59 25 59 25 49Z" fill="url(#cork)"/>
+    <path d="M25 45H39" stroke="#63b89a" stroke-width="2.5"/>
+  </g>
+</svg>

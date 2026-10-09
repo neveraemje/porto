@@ -47,7 +47,21 @@ export default defineConfig({
         name: "[name]-[hash:8].[ext]",
         clean: true,
     },
-    collections: { pages, posts },
+    collections: {
+        pages,
+        posts,
+        arabicPosts: defineCollection({
+            name: "ArabicPost",
+            pattern: "ar/posts/**/*.mdx",
+            schema: s.object({
+                slug: s.string(),
+                title: s.string(),
+                description: s.string(),
+                impact: s.string(),
+                body: s.mdx(),
+            }),
+        }),
+    },
     mdx: {
         rehypePlugins: [],
         remarkPlugins: [],

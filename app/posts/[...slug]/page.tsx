@@ -6,10 +6,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { HiChevronLeft } from "react-icons/hi"
 import Footer from "@/components/Footer"
-import { Button } from "@/components/ui/button"
 import PostProgress from "@/lib/postProgress"
-import { IBM_Plex_Sans } from "next/font/google"
 import DynamicProgressPreview from "@/lib/dynamic_progress"
+import CaseSectionNav from "@/components/CaseSectionNav"
 
 
 interface PostProps {
@@ -63,13 +62,13 @@ export default async function PostPage({ params }: PostProps) {
     <>
       {/* <PostProgress post={post} /> */}
       {/* <DynamicProgressPreview /> */}
-      <div className="prose dark:prose-invert max-w-3xl mx-auto px-6 sm:px-0">
+      <CaseSectionNav />
+      <div id="case-study" lang="en" dir="ltr" className="prose dark:prose-invert max-w-3xl mx-auto px-6 sm:px-0">
         <div className=" mt-10">
-          <Button variant="secondary" asChild>
-            <Link href="/case" className=" flex items-center gap-1 no-underline pl-3">
-              <HiChevronLeft /> Back
-            </Link>
-          </Button>
+          <Link href="/case" aria-label="Back to case studies" className="case-back-link">
+            <HiChevronLeft aria-hidden="true" className="h-5 w-5 shrink-0" />
+            <span aria-hidden="true" className="case-back-label">Back</span>
+          </Link>
         </div>
 
 
@@ -81,8 +80,8 @@ export default async function PostPage({ params }: PostProps) {
           <div className=" flex flex-col justify-center items-center gap-2 text-center">
 
             <h2 className=" bg-gradient-to-b from-zinc-700 to-zinc-500 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent 
-     mb-6 mt-10 lg:px-10 lg:leading-tight lg:text-5xl sm:text-2xl sm:px-2">{post!.title}</h2>
-            <p className="text-zinc-700 dark:text-zinc-300 font-medium text-lg lg:px-10 sm:px-2">{post!.description}</p>
+     mb-6 mt-10 lg:px-10 lg:leading-tight lg:text-5xl sm:text-2xl sm:px-2">{post.title}</h2>
+            <p className="text-zinc-700 dark:text-zinc-300 font-medium text-lg lg:px-10 sm:px-2">{post.description ?? ""}</p>
             <img src={post!.image} alt="" />
           </div>
 
@@ -104,7 +103,7 @@ export default async function PostPage({ params }: PostProps) {
             <div className="mt-4">
               <div className="text-sm">Project type</div>
               <div className=" flex items-center gap-2">
-                <div className=" font-semibold text-base">{post!.project}</div>
+                <div className=" font-semibold text-base">{post.project ?? ""}</div>
               </div>
             </div>
 
@@ -132,7 +131,7 @@ export default async function PostPage({ params }: PostProps) {
           <div className="w-full md:w-3/4 flex flex-col">
 
             <div className="font-semibold text-base mb-2 dark:text-zinc-300">Impact</div>
-            <div className="post-impact">{post!.impact}</div>
+            <div className="post-impact">{post.impact ?? ""}</div>
 
 
           </div>
@@ -144,7 +143,7 @@ export default async function PostPage({ params }: PostProps) {
 
           <hr className=" lg:hidden" />
 
-          <div className="w-full flex flex-col prose-vercel"><Mdx code={post!.body} />
+          <div data-case-body className="w-full flex flex-col prose-vercel"><Mdx code={post.body} />
 
           </div>
 
@@ -190,5 +189,3 @@ export default async function PostPage({ params }: PostProps) {
     </>
   )
 }
-
-

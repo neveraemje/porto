@@ -2,6 +2,25 @@ import { NextRequest, NextResponse } from "next/server"
 import { connectMongoDB } from "@/utils/config/mongodb"
 import User from "@/utils/models/user"
 
+const DEFAULT_POSTAGE_IMAGE = "/postcards/madinah.jpg";
+const MAX_MESSAGE_LENGTH = 220;
+const ALLOWED_CARD_COLORS = new Set(["yellow", "red", "blue", "green", "sky", "coral", "lavender", "mint", "rose", "stone"]);
+const ALLOWED_POSTAGE_IMAGES = new Set([
+  "/postcards/madinah.jpg",
+  "/postcards/sunflower.jpg",
+  "/postcards/flowers.jpg",
+  "/postcards/mountain.jpg",
+  "/postcards/orca.jpg",
+]);
+
+const sanitizePostageImage = (value) => {
+  if (ALLOWED_POSTAGE_IMAGES.has(value)) return value;
+  if (typeof value !== "string" || value.length > 3_000_000) return DEFAULT_POSTAGE_IMAGE;
+  return /^data:image\/(png|jpe?g|webp|gif);base64,/i.test(value)
+    ? value
+    : DEFAULT_POSTAGE_IMAGE;
+};
+
 // export async function POST(request) {
 //     const { name, email} = await request.json()
 //     await connectMongoDB()
@@ -10,14 +29,31 @@ import User from "@/utils/models/user"
 // }
 
 export async function POST(request) {
-    async function registerUser() {
-      const { name, email, photo, msg } = await request.json();
+    try {
+      const { name, email, photo, msg, postageImage, cardColor } = await request.json();
+      if (typeof msg !== "string" || msg.length > MAX_MESSAGE_LENGTH) {
+        return NextResponse.json(
+          { error: `Message must be ${MAX_MESSAGE_LENGTH} characters or fewer.` },
+          { status: 400 },
+        );
+      }
       await connectMongoDB();
-      await User.create({ name, email, photo, msg });
+      await User.create({
+        name,
+        email,
+        photo: photo || "/mj.png",
+        msg,
+        postageImage: sanitizePostageImage(postageImage),
+        cardColor: ALLOWED_CARD_COLORS.has(cardColor) ? cardColor : "yellow",
+      });
+      return NextResponse.json({ message: "User Registered" }, { status: 201 });
+    } catch (error) {
+      console.error("Failed to register guest", error);
+      return NextResponse.json(
+        { error: "Unable to save your message. Please try again." },
+        { status: 500 },
+      );
     }
-  
-    await registerUser();
-    return NextResponse.json({ message: "User Registered" }, { status: 201 });
   }
 
   export async function GET() {

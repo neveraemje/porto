@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { posts } from '@/velite-data';
+import { Translate } from '@/components/language-provider';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -41,7 +42,7 @@ export const CaseStudies = () => {
           transition: 'opacity 0.2s, transform 0.2s'
         }}
       >
-        Read case study <HiChevronRight className="text-sm" />
+        <Translate>Read case study</Translate> <HiChevronRight className="text-sm rtl:rotate-180" />
       </div>
 
       <ul className="flex flex-col gap-9 pl-0">

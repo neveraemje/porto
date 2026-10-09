@@ -9,3 +9,6 @@ export declare const pages: Page[]
 
 export type Post = Collections['posts']['schema']['_output']
 export declare const posts: Post[]
+
+export type ArabicPost = Collections['arabicPosts']['schema']['_output']
+export declare const arabicPosts: ArabicPost[]

@@ -2,15 +2,16 @@
 
 import "./globals.css"
 
-import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Analytics } from "@/components/analytics"
 import { SlidingTabBar } from "@/components/Slider"
 import Footer from "@/components/Footer"
 import NavBar from "@/components/navbar";
+import GuestCard from "@/components/(guestbook)/User";
 import { Metadata } from "next"
+import { LanguageProvider } from "@/components/language-provider"
+import { cookies } from "next/headers"
 
-const inter = Inter({ subsets: ["latin"] })
 
 // export const metadata = {
 //   title: "Neveraemje",
@@ -64,21 +65,26 @@ interface RootLayoutProps {
   children: React.ReactNode
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default async function RootLayout({ children }: RootLayoutProps) {
+  const cookieStore = await cookies();
+  const initialLanguage = cookieStore.get("site-language")?.value === "ar" ? "ar" : "en";
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={initialLanguage} dir={initialLanguage === "ar" ? "rtl" : "ltr"} suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className={`antialiased min-h-screen bg-white dark:bg-zinc-800 text-gray-800 dark:text-slate-50 ${inter.className}`}
+        className="antialiased min-h-screen bg-white dark:bg-zinc-800 text-gray-800 dark:text-slate-50"
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <LanguageProvider initialLanguage={initialLanguage}>
           <NavBar />
           <div className="max-w-screen mx-auto">
-            <main className="w-full mx-auto pb-28">{children}</main>
+            <main className="w-full mx-auto pt-24 pb-12">{children}</main>
             <Footer />
           </div>
           <Analytics />
+          <GuestCard />
+          </LanguageProvider>
         </ThemeProvider>
       </body>
 

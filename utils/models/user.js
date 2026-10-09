@@ -13,10 +13,20 @@ const userSchema = new Schema(
       msg: {
         type: String,
         required: true,
+        maxlength: 220,
       },
       photo: {
         type: String,
         required: true,
+      },
+      postageImage: {
+        type: String,
+        default: "/postcards/madinah.jpg",
+      },
+      cardColor: {
+        type: String,
+        enum: ["yellow", "red", "blue", "green", "sky", "coral", "lavender", "mint", "rose", "stone"],
+        default: "yellow",
       },
     }, 
     { 
@@ -25,6 +35,23 @@ const userSchema = new Schema(
 )
 
 const User = models.User || mongoose.model('User', userSchema)
+if (!User.schema.path('postageImage')) {
+  User.schema.add({
+    postageImage: {
+      type: String,
+      default: "/postcards/madinah.jpg",
+    },
+  })
+}
+if (!User.schema.path('cardColor')) {
+  User.schema.add({
+    cardColor: {
+      type: String,
+      enum: ["yellow", "red", "blue", "green", "sky", "coral", "lavender", "mint", "rose", "stone"],
+      default: "yellow",
+    },
+  })
+}
 export default User
 
 

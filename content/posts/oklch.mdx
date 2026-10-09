@@ -10,6 +10,15 @@ company_name: Gojek
 selected: true
 ---
 
+<section className="color-preview-section">
+
+## Gojek's universal color preview.
+You can choose two colors and evaluate their accessibility according to WCAG standards.
+
+<DynamicColorPreview />
+
+</section>
+
 ---
 
 ## Background
@@ -179,13 +188,6 @@ OKLCH is better than HSL for consistent color, precise brightness control, and a
 ### Constraint of OKLCH color model
 The OKLCH color model is primarily suited for web and desktop applications, with limited support in Android, iOS, and Figma. To address this, we are using the OKLCH color model as a method to establish a color palette by building an OKLCH generator dashboard that supports palettes with shades, charts, and accessibility data (WCAG and APCA). However, we will use hexadecimal values in Figma.
 ![Untitled](/oklch/oklchdash.png)
-
----
-
-## Gojek's universal color preview.
-You can choose two colors and evaluate their accessibility according to WCAG standards.
-
-<DynamicColorPreview />
 
 ---
 

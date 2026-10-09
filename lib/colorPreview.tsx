@@ -229,6 +229,7 @@
 
 "use client";
 import React, { useState } from "react";
+import { useLanguage } from "@/components/language-provider";
 import { HiCheck, HiX, HiOutlineMinus } from "react-icons/hi";
 import { Badge } from "@/components/ui/badge";
 
@@ -263,6 +264,7 @@ interface ColorPreviewProps {
 }
 
 const ColorPreview: React.FC<ColorPreviewProps> = ({ data }) => {
+  const { t } = useLanguage();
   const [selectedColors, setSelectedColors] = useState<string[]>([]);
 
   const handleColorSelect = (color: string) => {
@@ -294,8 +296,9 @@ const ColorPreview: React.FC<ColorPreviewProps> = ({ data }) => {
                   className={`cursor-pointer relative ${isSelected ? "rounded-md" : ""}`}
                   style={{
                     backgroundColor: color,
-                    width: "37px",
-                    height: "37px",
+                    flex: "1 1 0",
+                    minWidth: 0,
+                    aspectRatio: "1 / 1",
                     transform: isSelected ? "scale(1.2)" : "scale(1)",
                     zIndex: isSelected ? 10 : 1,
                     transition: "transform 0.2s ease, z-index 0.2s ease",
@@ -322,7 +325,7 @@ const ColorPreview: React.FC<ColorPreviewProps> = ({ data }) => {
       {/* Result Section 2 */}
       <div className="wcag-container">
       <div className="wcag-sub-container">
-          <div className="wcag-title">Selected colors</div>
+          <div className="wcag-title">{t("Selected colors")}</div>
           <div className="flex flex-col gap-2">
             {[0, 1].map((index) => {
               const color = selectedColors[index];
@@ -351,7 +354,7 @@ const ColorPreview: React.FC<ColorPreviewProps> = ({ data }) => {
                   </div>
                   {/* Text Info */}
                   <div className="wcag-color">
-                    {color ? `${hue?.name} ${toneLevel}` : "Select color"}
+                    {color ? `${hue?.name} ${toneLevel}` : t("Select color")}
                   </div>
                 </div>
               );
@@ -361,7 +364,7 @@ const ColorPreview: React.FC<ColorPreviewProps> = ({ data }) => {
 
           {/* Right Side */}
         <div className="wcag-sub-container">
-        <div className="wcag-title">Contrast ratio</div>
+        <div className="wcag-title">{t("Contrast ratio")}</div>
           {/* Show contrast ratio or dash if not available */}
           <div className="text-sm text-gray-500 font-medium mt-1">
             {contrastRatio ? `${contrastRatio.toFixed(2)}:1` : <HiOutlineMinus/> }
@@ -378,7 +381,7 @@ const ColorPreview: React.FC<ColorPreviewProps> = ({ data }) => {
                 ) : (
                   <HiX className="text-red-500" />
                 )}
-                <span className="text-sm font-medium ml-2">AA Normal text</span>
+                <span className="text-sm font-medium ml-2">{t("AA Normal text")}</span>
               </Badge>
 
               {/* AAA Large Text */}
@@ -390,7 +393,7 @@ const ColorPreview: React.FC<ColorPreviewProps> = ({ data }) => {
                 ) : (
                   <HiX className="text-red-500" />
                 )}
-                <span className="text-sm font-medium ml-2">AAA Large text</span>
+                <span className="text-sm font-medium ml-2">{t("AAA Large text")}</span>
               </Badge>
 
               {/* AA Graphical Objects */}
@@ -402,7 +405,7 @@ const ColorPreview: React.FC<ColorPreviewProps> = ({ data }) => {
                 ) : (
                   <HiX className="text-red-500" />
                 )}
-                <span className="text-sm font-medium ml-2">AA Graphical object</span>
+                <span className="text-sm font-medium ml-2">{t("AA Graphical object")}</span>
               </Badge>
             </div>
           ) : (
@@ -412,20 +415,20 @@ const ColorPreview: React.FC<ColorPreviewProps> = ({ data }) => {
                 variant="secondary"
               >
                 <HiOutlineMinus className="text-gray-500" />
-                <span className="text-sm font-medium ml-2">AA Normal text</span>
+                <span className="text-sm font-medium ml-2">{t("AA Normal text")}</span>
               </Badge>
               <Badge
                 variant="secondary"
               >
                 <HiOutlineMinus className="text-gray-500" />
-                <span className="text-sm font-medium ml-2">AAA Large text</span>
+                <span className="text-sm font-medium ml-2">{t("AAA Large text")}</span>
               </Badge>
 
               <Badge
                 variant="secondary"
               >
                 <HiOutlineMinus className="text-gray-500" />
-                <span className="text-sm font-medium ml-2">AA Graphical object</span>
+                <span className="text-sm font-medium ml-2">{t("AA Graphical object")}</span>
               </Badge>
             </div>
           )}

@@ -50,8 +50,10 @@ import React from "react"
 import { useTheme } from "next-themes"
 import { HiSun, HiMoon } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "@/components/language-provider";
 
 export function ModeToggle() {
+  const { t } = useLanguage();
   const { setTheme, theme } = useTheme()
   const [mounted, setMounted] = React.useState(false)
 
@@ -61,7 +63,7 @@ export function ModeToggle() {
 
   if (!mounted) {
     return (
-      <div className="flex rounded-full w-9 h-9 items-center justify-center">
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-[0_8px_24px_rgba(0,0,0,0.12),0_0_1px_rgba(0,0,0,0.1)] dark:border-zinc-700 dark:bg-zinc-950 sm:h-14 sm:w-14">
         <div className="w-5 h-5" />
       </div>
     )
@@ -76,11 +78,10 @@ export function ModeToggle() {
     <motion.button
       whileHover="hover"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="group flex bg-black/5 dark:bg-white/5 rounded-full w-9 h-9 items-center justify-center text-zinc-600 
-      dark:text-white hover:text-teal-600 
-      dark:hover:text-yellow-400 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-300 relative overflow-hidden"
+      className="group relative flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full border border-zinc-200 bg-white text-zinc-600 shadow-[0_8px_24px_rgba(0,0,0,0.12),0_0_1px_rgba(0,0,0,0.1)] transition-all duration-300 hover:text-teal-600 dark:border-zinc-700 dark:bg-zinc-950 dark:text-white dark:hover:text-yellow-400 sm:h-14 sm:w-14"
     >
-      <span className="sr-only">Toggle mode</span>
+      <span className="sr-only">{t("Toggle mode")}</span>
+      <span aria-hidden="true" className="pointer-events-none absolute inset-[6px] rounded-full bg-zinc-100 dark:bg-zinc-800 sm:inset-[7px]" />
       <AnimatePresence mode="wait" initial={false}>
         {theme === "dark" ? (
           <motion.div
@@ -90,6 +91,7 @@ export function ModeToggle() {
             exit={{ y: -20, opacity: 0, rotate: 90 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
             variants={{ hover: iconVariants.sunHover }}
+            className="relative z-10"
           >
             <HiSun className="w-5 h-5" />
           </motion.div>
@@ -101,6 +103,7 @@ export function ModeToggle() {
             exit={{ y: -20, opacity: 0, rotate: -90 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
             variants={{ hover: iconVariants.moonHover }}
+            className="relative z-10"
           >
             <HiMoon className="w-5 h-5" />
           </motion.div>

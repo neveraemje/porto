@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Translate } from '@/components/language-provider';
 
 const companies = [
   {
@@ -39,7 +40,7 @@ const Company = () => {
   }, []);
 
   return (
-    <div className="flex items-center gap-6 mb-2">
+    <div className="flex items-center gap-2 mb-2 sm:gap-6">
       {/* Custom Cursor Label */}
       <div
         className={`fixed pointer-events-none z-[100] bg-black/80 dark:bg-white/80 backdrop-blur-md text-white dark:text-black px-3 py-1.5 rounded-full text-xs font-semibold shadow-xl transition-opacity duration-300 ease-out flex items-center gap-1 border border-white/20 dark:border-black/10`}
@@ -54,7 +55,7 @@ const Company = () => {
         {hoveredCompany}
       </div>
 
-      <div className="flex -space-x-3 isolate items-center">
+      <div dir="ltr" className="flex -space-x-3 isolate items-center">
         {companies.map((company) => (
           <Link 
             key={company.name}
@@ -76,9 +77,9 @@ const Company = () => {
         ))}
       </div>
       <div className="flex flex-col justify-center h-11">
-        <h4 className="text-zinc-500 dark:text-zinc-500 m-0 p-0 font-medium text-xs sm:text-sm tracking-tight leading-snug text-left">
-          9+ years <br />
-          of professional experience.
+        <h4 className="whitespace-nowrap text-zinc-500 dark:text-zinc-500 m-0 p-0 font-medium text-xs sm:text-sm tracking-tight leading-snug text-left">
+          <Translate>9+ years</Translate>{" "}
+          <Translate>of professional experience.</Translate>
         </h4>
       </div>
     </div>
@@ -86,4 +87,3 @@ const Company = () => {
 };
 
 export default Company;
-
