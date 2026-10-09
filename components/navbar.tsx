@@ -24,7 +24,7 @@ const NavBar = () => {
     },
     {
       title: "Guestpost",
-      path: "/book",
+      path: "/postcard",
     },
   ];
 
@@ -71,10 +71,10 @@ const NavBar = () => {
           </LayoutGroup>
 
           {/* <Link
-            href="/book"
+            href="/postcard"
             aria-label={t("Guestpost")}
-            aria-current={pathname === "/book" ? "page" : undefined}
-            className={`relative inline-flex shrink-0 items-center whitespace-nowrap rounded-full px-2 py-2 text-[11px] font-medium transition-colors duration-300 sm:px-3 sm:py-3 sm:text-sm ${language === "ar" ? "order-last" : "order-first"} ${pathname === "/book" ? "text-teal-600 dark:text-teal-400" : "text-black/80 dark:text-white hover:text-teal-600 dark:hover:text-teal-400"}`}
+            aria-current={pathname === "/postcard" ? "page" : undefined}
+            className={`relative inline-flex shrink-0 items-center whitespace-nowrap rounded-full px-2 py-2 text-[11px] font-medium transition-colors duration-300 sm:px-3 sm:py-3 sm:text-sm ${language === "ar" ? "order-last" : "order-first"} ${pathname === "/postcard" ? "text-teal-600 dark:text-teal-400" : "text-black/80 dark:text-white hover:text-teal-600 dark:hover:text-teal-400"}`}
           >
             <Translate>Guestpost</Translate>
           </Link> */}

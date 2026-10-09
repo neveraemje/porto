@@ -33,10 +33,10 @@ export default function Home() {
           <div className="flex justify-between items-center w-full">
             <Image
               src="/mj.png"
-              width={72}
-              height={72}
+              width={100}
+              height={100}
               alt="emje"
-              className="rounded-full border border-neutral-200 dark:border-neutral-800 shadow-sm my-0"
+              className="rounded-full border border-neutral-200 dark:border-neutral-800 my-0"
             />
           </div>
           {/* <h1 className="max-w-2xl bg-gradient-to-b from-zinc-700 to-zinc-500 dark:from-zinc-100 dark:to-zinc-400 bg-clip-text text-transparent text-2xl lg:text-4xl mb-0 tracking-tight py-1 font-bold">

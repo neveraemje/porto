@@ -186,9 +186,18 @@ export default function GuestCard() {
             isOpen ? "pointer-events-none opacity-0" : "pointer-events-auto opacity-100"
           }`}
         >
-          <span className="absolute left-[14px] top-[20px] text-base font-semibold leading-none"><Translate>GUEST POSTCARD</Translate></span>
+          <span
+            dir={language === "ar" ? "rtl" : "ltr"}
+            className={`absolute top-[20px] text-base font-semibold leading-none ${
+              language === "ar" ? "right-[14px] text-right" : "left-[14px] text-left"
+            }`}
+          >
+            <Translate>GUEST POSTCARD</Translate>
+          </span>
           <Image alt="" aria-hidden="true" src="/figma/guest-card/card-line.svg" width="337" height="5" className="absolute left-[5px] top-[54px] max-w-none" />
-          <span className="absolute right-[15px] top-[16px] flex h-[26px] w-[26px] items-center justify-center rounded-full border border-[var(--guest-border)] bg-[var(--guest-button-text)] text-[var(--guest-ink)]">
+          <span className={`absolute top-[16px] flex h-[26px] w-[26px] items-center justify-center rounded-full border border-[var(--guest-border)] bg-[var(--guest-button-text)] text-[var(--guest-ink)] ${
+            language === "ar" ? "left-[15px]" : "right-[15px]"
+          }`}>
             <HiArrowUp aria-hidden="true" className="h-4 w-4" />
           </span>
         </button>
